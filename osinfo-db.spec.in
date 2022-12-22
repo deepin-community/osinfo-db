@@ -1,0 +1,38 @@
+# -*- rpm-spec -*-
+
+Summary: osinfo database files
+Name: osinfo-db
+Version: @VERSION@
+Release: 1%{?dist}
+License: GPLv2+
+Source: https://releases.pagure.org/libosinfo/%{name}-%{version}.tar.xz
+URL: https://libosinfo.org/
+BuildRequires: gettext
+BuildRequires: osinfo-db-tools
+BuildArch: noarch
+Requires: hwdata
+
+%description
+The osinfo database provides information about operating systems and
+hypervisor platforms to facilitate the automated configuration and
+provisioning of new virtual machines
+
+%install
+osinfo-db-import  --root %{buildroot} --dir %{_datadir}/osinfo %{SOURCE0}
+%if 0%{?rhel}
+# Remove the upstream virtio-win / spice-guest-tools drivers
+find %{buildroot}/%{_datadir}/osinfo/os/microsoft.com/ -name "win-*.d" -type d -exec rm -rf {} +
+%endif
+
+%files
+%dir %{_datadir}/osinfo/
+%doc %{_datadir}/osinfo/LICENSE
+%{_datadir}/osinfo/VERSION
+%{_datadir}/osinfo/datamap
+%{_datadir}/osinfo/device
+%{_datadir}/osinfo/os
+%{_datadir}/osinfo/platform
+%{_datadir}/osinfo/install-script
+%{_datadir}/osinfo/schema
+
+%changelog

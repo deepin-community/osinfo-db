@@ -1,0 +1,19 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://debian.org/debian/1.2">
+    <short-id>debian1.2</short-id>
+    <short-id>debianrex</short-id>
+    <name>Debian GNU/Linux 1.2</name>
+    <version>1.2</version>
+    <vendor>Debian Project</vendor>
+    <family>linux</family>
+    <distro>debian</distro>
+    <codename>rex</codename>
+    <upgrades id="http://debian.org/debian/1.1"/>
+    <derives-from id="http://debian.org/debian/1.1"/>
+
+    <release-date>1996-12-12</release-date>
+    <eol-date>1998-06-05</eol-date>
+  </os>
+</libosinfo>

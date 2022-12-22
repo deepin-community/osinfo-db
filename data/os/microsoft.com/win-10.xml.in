@@ -1,0 +1,152 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://microsoft.com/win/10">
+    <short-id>win10</short-id>
+    <name>Microsoft Windows 10</name>
+    <version>10.0</version>
+    <vendor>Microsoft Corporation</vendor>
+    <family>winnt</family>
+    <distro>win</distro>
+    <derives-from id="http://microsoft.com/win/8.1"/>
+    <upgrades id="http://microsoft.com/win/8.1"/>
+
+    <release-date>2018-11-13</release-date>
+    <eol-date>2029-01-09</eol-date>
+
+    <variant id="education">
+      <name>Microsoft Windows 10 Education</name>
+    </variant>
+    <variant id="enterprise">
+      <name>Microsoft Windows 10 Enterprise</name>
+    </variant>
+    <variant id="enterprise-ltsb">
+      <name>Microsoft Windows 10 Enterprise (Long Term Servicing Branch)</name>
+    </variant>
+    <variant id="enterprise-ltsb-eval">
+      <name>Microsoft Windows 10 Enterprise (Long Term Servicing Branch) Evaluation</name>
+    </variant>
+
+    <!-- Education -->
+    <media arch="i686" installer-reboots="2">
+      <variant id="education"/>
+      <iso>
+        <volume-id>(J_)?CEDN?A_X86FRE_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/8/l10n-language">[A-Z0-9_]*_([A-Z]*-[A-Z]*)</l10n-language>
+      </iso>
+    </media>
+    <media arch="x86_64" installer-reboots="2">
+      <variant id="education"/>
+      <iso>
+        <volume-id>(J_)?CEDN?A_X64FREE?_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/8/l10n-language">[A-Z0-9_]*_([A-Z]*-[A-Z]*)</l10n-language>
+      </iso>
+    </media>
+
+    <!-- Enterprise -->
+    <media arch="i686" installer-reboots="2">
+      <variant id="enterprise"/>
+      <iso>
+        <volume-id>^(J_)?CEN?A_X86FREV_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/8/l10n-language">[A-Z0-9_]*_([A-Z]*-[A-Z]*)</l10n-language>
+      </iso>
+    </media>
+    <media arch="x86_64" installer-reboots="2">
+      <variant id="enterprise"/>
+      <iso>
+        <volume-id>^(J_)?CENN?A_X64FREV_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/8/l10n-language">[A-Z0-9_]*_([A-Z]*-[A-Z]*)</l10n-language>
+      </iso>
+    </media>
+
+    <!-- Enterprise LTSB -->
+    <media arch="i686" installer-reboots="2">
+      <variant id="enterprise-ltsb"/>
+      <iso>
+        <volume-id>(J_)?CESN?N?_X86FREV_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/8/l10n-language">[A-Z0-9_]*_([A-Z]*-[A-Z]*)</l10n-language>
+      </iso>
+    </media>
+    <media arch="x86_64" installer-reboots="2">
+      <variant id="enterprise-ltsb"/>
+      <iso>
+        <volume-id>(J_)?CESN?N?_X64FREV_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/8/l10n-language">[A-Z0-9_]*_([A-Z]*-[A-Z]*)</l10n-language>
+      </iso>
+    </media>
+
+    <!-- Enterprise LTSB (Eval) -->
+    <media arch="i686" installer-reboots="2">
+      <variant id="enterprise-ltsb-eval"/>
+      <iso>
+        <volume-id>CESE_X86FREE_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/8/l10n-language">[A-Z0-9_]*_([A-Z]*-[A-Z]*)</l10n-language>
+      </iso>
+    </media>
+    <media arch="x86_64" installer-reboots="2">
+      <variant id="enterprise-ltsb-eval"/>
+      <iso>
+        <volume-id>CESE_X64FREE_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/8/l10n-language">[A-Z0-9_]*_([A-Z]*-[A-Z]*)</l10n-language>
+      </iso>
+    </media>
+
+    <!-- No Variant -->
+    <media arch="i686" installer-reboots="2">
+      <iso>
+        <volume-id>^(J_)?CCSN?A_X86FRE_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/8/l10n-language">[A-Z0-9_]*_([A-Z]*-[A-Z]*)</l10n-language>
+      </iso>
+    </media>
+    <media arch="x86_64" installer-reboots="2">
+      <iso>
+        <volume-id>^(J_)?(CCSN?A|C?CCOMA)_X64FREE?_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/8/l10n-language">[A-Z0-9_]*_([A-Z]*-[A-Z]*)</l10n-language>
+      </iso>
+    </media>
+
+    <resources arch="i686">
+      <minimum>
+        <cpu>1000000000</cpu>
+        <n-cpus>1</n-cpus>
+        <ram>1073741824</ram>
+        <storage>17179869184</storage>
+      </minimum>
+    </resources>
+
+    <resources arch="x86_64">
+      <minimum>
+        <cpu>1000000000</cpu>
+        <n-cpus>1</n-cpus>
+        <ram>2147483648</ram>
+        <storage>21474836480</storage>
+      </minimum>
+
+      <maximum>
+        <ram>6597069766656</ram>
+      </maximum>
+    </resources>
+
+    <installer>
+      <script id='http://microsoft.com/windows/unattend/jeos'/>
+      <script id='http://microsoft.com/windows/unattend/desktop'/>
+
+      <!--
+          User avatar not being set for Windows 8 (or newer).
+          For more details, please, see:
+          https://bugzilla.redhat.com/show_bug.cgi?id=1328637
+      -->
+      <script id='http://microsoft.com/windows/cmd/desktop'/>
+    </installer>
+  </os>
+</libosinfo>

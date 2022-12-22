@@ -1,0 +1,34 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://gnome.org/gnome/3.6">
+    <short-id>gnome3.6</short-id>
+    <name>GNOME 3.6</name>
+    <version>3.6</version>
+    <vendor>GNOME Project</vendor>
+    <family>linux</family>
+    <distro>gnome</distro>
+    <derives-from id="http://fedoraproject.org/fedora/18"/>
+
+    <release-date>2012-09-26</release-date>
+    <eol-date>2013-09-25</eol-date>
+
+    <media arch="i686" live="true">
+      <iso>
+        <volume-id>GNOME36-LiveCD</volume-id>
+        <system-id>LINUX</system-id>
+      </iso>
+      <kernel>isolinux/vmlinuz0</kernel>
+      <initrd>isolinux/initrd0.img</initrd>
+    </media>
+
+    <resources arch="all">
+      <!-- These values are copied from that of Fedora 17/18 as AFAIK currently
+           GNOME is just Fedora with a few differences, mainly the name. -->
+      <minimum>
+        <n-cpus>1</n-cpus>
+        <ram>805306368</ram>
+      </minimum>
+    </resources>
+  </os>
+</libosinfo>

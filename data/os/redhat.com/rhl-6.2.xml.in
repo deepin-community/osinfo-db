@@ -1,0 +1,18 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://redhat.com/rhl/6.2">
+    <short-id>rhl6.2</short-id>
+    <name>Red Hat Linux 6.2</name>
+    <version>6.2</version>
+    <vendor>Red Hat, Inc</vendor>
+    <family>linux</family>
+    <distro>rhl</distro>
+    <codename>Zoot</codename>
+    <upgrades id="http://redhat.com/rhl/6.1"/>
+    <derives-from id="http://redhat.com/rhl/6.1"/>
+
+    <release-date>2000-04-03</release-date>
+    <eol-date>2003-03-31</eol-date>
+  </os>
+</libosinfo>

@@ -1,0 +1,68 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://microsoft.com/win/2k16">
+    <short-id>win2k16</short-id>
+    <name>Microsoft Windows Server 2016</name>
+    <version>10.0</version>
+    <vendor>Microsoft Corporation</vendor>
+    <family>winnt</family>
+    <distro>win</distro>
+    <derives-from id="http://microsoft.com/win/2k12r2"/>
+    <upgrades id="http://microsoft.com/win/2k12r2"/>
+
+    <release-date>2016-10-15</release-date>
+    <eol-date>2027-01-12</eol-date>
+
+    <variant id="hyperv">
+      <name>Windows Server 2016 for HyperV</name>
+    </variant>
+    <variant id="essentials">
+      <name>Windows Server 2016 Essentials</name>
+    </variant>
+
+    <media arch="x86_64">
+      <iso>
+        <volume-id>^(SSS_X64CHK|SSS_X64FREE?)_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/7/l10n-language">[A-Z0-9]*_([A-Z]*)</l10n-language>
+      </iso>
+    </media>
+    <media arch="x86_64">
+      <variant id="essentials"/>
+      <iso>
+        <volume-id>^(SESS_X64FREE?)_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/7/l10n-language">[A-Z0-9]*_([A-Z]*)</l10n-language>
+      </iso>
+    </media>
+    <media arch="x86_64">
+      <variant id="hyperv"/>
+      <iso>
+        <volume-id>^(SHV_X64CHK|SHV_X64FREE?)_</volume-id>
+        <publisher-id>MICROSOFT CORPORATION</publisher-id>
+        <l10n-language regex="true" l10n-language-map="http://microsoft.com/win/7/l10n-language">[A-Z0-9]*_([A-Z]*)</l10n-language>
+      </iso>
+    </media>
+
+    <resources arch="x86_64">
+      <minimum>
+        <cpu>1400000000</cpu>
+        <n-cpus>1</n-cpus>
+        <ram>536870912</ram>
+        <storage>34359738368</storage>
+      </minimum>
+
+      <recommended>
+        <cpu>2000000000</cpu>
+        <ram>2147483648</ram>
+        <storage>42949672960</storage>
+      </recommended>
+
+      <maximum>
+        <ram>26388279066624</ram>
+      </maximum>
+    </resources>
+
+  </os>
+</libosinfo>

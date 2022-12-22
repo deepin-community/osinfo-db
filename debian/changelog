@@ -1,0 +1,230 @@
+osinfo-db (0.20211013-1) unstable; urgency=medium
+
+  * New upstream version 0.20211013
+
+ -- Pino Toscano <pino@debian.org>  Wed, 13 Oct 2021 22:05:01 +0200
+
+osinfo-db (0.20210903-1) unstable; urgency=medium
+
+  * New upstream version 0.20210903
+    - adds Debian Bullseye (Closes: #980744)
+  * Bump Standards-Version to 4.6.0, no changes required
+  * test-installscript autopkgtest: test also Debian 11
+  * Drop git commit names from changelog
+
+ -- Pino Toscano <pino@debian.org>  Sat, 04 Sep 2021 06:20:35 +0200
+
+osinfo-db (0.20210809-1) unstable; urgency=medium
+
+  * [0de4084] New upstream version 0.20210809
+
+ -- Pino Toscano <pino@debian.org>  Sun, 15 Aug 2021 11:00:36 +0200
+
+osinfo-db (0.20210215-1) unstable; urgency=medium
+
+  * [202fb83] New upstream version 0.20210215
+
+ -- Pino Toscano <pino@debian.org>  Thu, 25 Feb 2021 08:19:42 +0100
+
+osinfo-db (0.20210202-1) unstable; urgency=medium
+
+  * [46fbc46] New upstream version 0.20210202
+
+ -- Pino Toscano <pino@debian.org>  Tue, 09 Feb 2021 18:20:34 +0100
+
+osinfo-db (0.20201218-1) unstable; urgency=medium
+
+  * [77fc8b4] New upstream version 0.20201218
+
+ -- Pino Toscano <pino@debian.org>  Sun, 20 Dec 2020 15:02:15 +0100
+
+osinfo-db (0.20201119-1) unstable; urgency=medium
+
+  * [652acbd] New upstream version 0.20201119
+  * [19dd9a3] Bump Standards-Version to 4.5.1, no changes required
+  * [62ea5de] d/watch: switch to v4, drop "0." from Debian version
+  * [8fda846] Disable signature verification, as we do not use upstream tarballs
+  * [7d9bea6] d/upstream/metadata: fill/improve a bit
+
+ -- Pino Toscano <pino@debian.org>  Mon, 23 Nov 2020 10:27:16 +0100
+
+osinfo-db (0.20201015-1) unstable; urgency=medium
+
+  * [a0511a7] Group common make args in variable
+  * [65b8290] Use parallel jobs if requested
+  * [5c1c05c] Add the locales-all build dependency.
+    It will be needed to have the en_US.UTF-8 locale.
+  * [03a7a99] Annotate the test build dependencies as !nocheck
+  * [31e8430] Remove the unused libxml2-utils build dependency
+  * [27c5532] Run the upstream test suite at build time.
+    VPATH test suite runs were fixed many months ago.
+  * [ec13454] test-installscript autopkgtest: test also Debian 10 and testing
+  * [38d5128] Add a new testsuite autopkgtest.
+    It runs the upstream test suite on the installed osinfo-db.
+  * [bf29391] Add helper script to create upstream tarballs
+  * [fe94f88] New upstream version 0.20201015
+  * [9bab297] Import directly to debian/osinfo-db
+  * [e1bbdf0] Bump Standards-Version to 4.5.0; no changes required
+  * [230a8ad] Add Rules-Requires-Root: no
+  * [da8f80e] Bump the debhelper compatibility to 13
+    - switch the debhelper-compat build dependency to 13
+  * [d74a41e] Update the build dependencies according to the new upstream
+    version:
+    - add gettext, explicitly used
+    - drop intltool, no more used
+  * [2888f9c] Remove unused debian/osinfo-db-docs.docs
+  * [fadf349] Do not use the non-existing ${shlibs:Depends} substvar
+  * [17ebf70] d/rules: do not print a message for DEB_BUILD_OPTIONS=nocheck
+  * [7ddfffd] Add myself to Uploaders
+
+ -- Pino Toscano <pino@debian.org>  Thu, 22 Oct 2020 23:07:35 +0200
+
+osinfo-db (0.20200325-1) unstable; urgency=medium
+
+  [ Guido Günther ]
+  * [5716df8] Add salsa-ci
+  * [7c986e9] New upstream version 0.20200325
+    (Closes: #941764)
+
+  [ Debian Janitor ]
+  * [86dd802] Bump debhelper from old 11 to 12.
+    Fixes lintian: package-uses-old-debhelper-compat-version
+  * [0d047da] Set debhelper-compat version in Build-Depends.
+    Fixes lintian: uses-debhelper-compat-file
+  * [e70bd99] Re-export upstream signing key without extra signatures.
+    Fixes lintian: public-upstream-key-not-minimal
+  * [b926a0c] Set upstream metadata fields: Repository, Repository-Browse.
+    Fixes lintian: upstream-metadata-file-is-missing
+
+ -- Guido Günther <agx@sigxcpu.org>  Wed, 15 Apr 2020 12:13:33 +0200
+
+osinfo-db (0.20190728-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Guido Günther <agx@sigxcpu.org>  Sun, 28 Jul 2019 12:27:27 +0200
+
+osinfo-db (0.20190728-1) experimental; urgency=medium
+
+  * [618ff6e] New upstream version 0.20190728
+    (Closes: #919486)
+
+ -- Guido Günther <agx@sigxcpu.org>  Sun, 28 Jul 2019 10:29:01 +0200
+
+osinfo-db (0.20190411-1) experimental; urgency=medium
+
+  * [db0775b] New upstream version 0.20190411
+    (Closes: #919492)
+  * [4d8dc9f] d/gbp.conf: Switch to experimental
+  * [5e316c2] d/control: Update build deps for new tests
+  * [7ff7a4f] d/rules: Simplify build
+  * [9d71757] d/rules: Disable tests.
+    Running them out of tree is currently broken.
+  * [d835b01] Use minimal upstream signing key
+
+ -- Guido Günther <agx@sigxcpu.org>  Thu, 11 Apr 2019 13:19:34 +0200
+
+osinfo-db (0.20181120-1) unstable; urgency=medium
+
+  * [aa777b6] New upstream version 0.20181120
+    (Closes: #913908)
+
+ -- Guido Günther <agx@sigxcpu.org>  Tue, 20 Nov 2018 22:41:36 +0100
+
+osinfo-db (0.20180929-1) unstable; urgency=medium
+
+  * [478429c] New upstream version 0.20180929
+    (Closes: #908973)
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 29 Sep 2018 10:19:59 +0200
+
+osinfo-db (0.20180917-1) unstable; urgency=medium
+
+  * [13ecc03] New upstream version 0.20180917
+    (Closes: #908983)
+  * [4f9f362] d/control: Bump standards version to 4.2.1
+  * [862e376] d/rules: Honor DEB_BUILD_OPTIONS=nocheck
+  * [bf69c25] d/copyright: Avoid duplicate license section
+  * [63f7c72] Switch to debhelper compat level 11
+  * [c0f0f40] Don't install extra license file to /u/s/osinfo
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 17 Sep 2018 09:52:18 +0200
+
+osinfo-db (0.20180628-1) unstable; urgency=medium
+
+  [ Guido Günther ]
+  * [25145bf] Point VCS-* URLs to salsa
+  * [1bcb0b3] gbp: use commit hashes in changelog
+  * [fd17d3c] New upstream version 0.20180628
+    (Closes: #902538)
+
+  [ Helmut Grohne ]
+  * [34d4878] Mark osinfo-db Multi-Arch: foreign (Closes: #893429)
+
+ -- Guido Günther <agx@sigxcpu.org>  Thu, 28 Jun 2018 09:07:49 +0200
+
+osinfo-db (0.20180226-1) unstable; urgency=medium
+
+  * Test that we can generate install scripts
+  * New upstream git snapshot (Closes: #884521)
+  * Update debian/watch URL.  We're using git snapshots anyway but it's better
+    to have this correct. (Closes: #884520)
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 26 Feb 2018 10:21:37 +0100
+
+osinfo-db (0.20170811-1) unstable; urgency=medium
+
+  * [596e960] Fix vcs git url
+  * [226d475] New upstream version 0.20170811
+  * [1cfe3ae] Drop debian-switch-to-archive-URLs-for-stretch.patch applied
+    upstream
+
+ -- Guido Günther <agx@sigxcpu.org>  Fri, 11 Aug 2017 16:48:31 -0300
+
+osinfo-db (0.20170707-2) unstable; urgency=medium
+
+  * [c821b78] debian: switch to archive URLs for stretch
+
+ -- Guido Günther <agx@sigxcpu.org>  Sun, 23 Jul 2017 14:02:34 +0200
+
+osinfo-db (0.20170707-1) unstable; urgency=medium
+
+  * [1428d41] New upstream version 0.20170707
+  * [1f875ee] Run make check during
+  * [a906220] Drop all patches - all appplied upstream
+
+ -- Guido Günther <agx@sigxcpu.org>  Fri, 07 Jul 2017 18:09:19 +0200
+
+osinfo-db (0.20170225-3) unstable; urgency=medium
+
+  * [c058963] Update Jessie DVD links.
+  * [745d2f5] Add Debian Stretch (Closes: #864923)
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 19 Jun 2017 19:34:55 +0200
+
+osinfo-db (0.20170225-2) unstable; urgency=medium
+
+  * [7016785] Fix Stretch URL for i386.
+    Thanks to Laurent Bigonville
+  * [6c535bc] Make build reproducible.
+    Thanks to Chris Lamb (Closes: #860848)
+  * [f34951d] Switch to Stretch Installer RC3
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 22 Apr 2017 11:42:55 +0200
+
+osinfo-db (0.20170225-1) unstable; urgency=medium
+
+  * [b3f7c2d] New upstream version 0.20170225
+    with support for recent linux distributions and windows
+    (Closes: #856666)
+  * [b8fecd0] Add autopkgtest
+  * [0520bd5] Debian Jessie: Update DVD links
+  * [efcfeb9] Add Debian Stretch RCs (Closes: #856667)
+
+ -- Guido Günther <agx@sigxcpu.org>  Tue, 14 Mar 2017 19:51:53 +0100
+
+osinfo-db (0.20160728+git20161020-1) unstable; urgency=medium
+
+  * Initial release (Closes: #840386)
+
+ -- Guido Günther <agx@sigxcpu.org>  Tue, 11 Oct 2016 20:24:26 +0200

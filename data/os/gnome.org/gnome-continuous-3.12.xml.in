@@ -1,0 +1,24 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://gnome.org/gnome-continuous/3.12">
+    <short-id>gnome-continuous-3.12</short-id>
+    <name>GNOME 3.12</name>
+    <version>3.12</version>
+    <vendor>GNOME Project</vendor>
+    <family>linux</family>
+    <distro>gnome</distro>
+    <derives-from id="http://gnome.org/gnome-continuous/3.10"/>
+    <upgrades id="http://gnome.org/gnome-continuous/3.10"/>
+    <release-status>snapshot</release-status>
+
+    <eol-date>2015-06-24</eol-date>
+
+    <resources arch="all">
+      <minimum>
+        <n-cpus>2</n-cpus>
+        <ram>1073741824</ram>
+      </minimum>
+    </resources>
+  </os>
+</libosinfo>

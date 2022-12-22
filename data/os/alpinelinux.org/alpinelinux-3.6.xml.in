@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://alpinelinux.org/alpinelinux/3.6">
+    <short-id>alpinelinux3.6</short-id>
+    <name>Alpine Linux 3.6</name>
+    <version>3.6</version>
+    <vendor>Alpine Linux Project</vendor>
+    <family>linux</family>
+    <distro>alpinelinux</distro>
+    <upgrades id="http://alpinelinux.org/alpinelinux/3.5"/>
+    <derives-from id="http://alpinelinux.org/alpinelinux/3.5"/>
+
+    <release-date>2017-05-24</release-date>
+    <eol-date>2019-05-01</eol-date>
+
+    <resources arch="all">
+      <minimum>
+        <cpu>1000000000</cpu>
+        <n-cpus>1</n-cpus>
+        <ram>134217728</ram>
+        <storage>1073741824</storage>
+      </minimum>
+      <recommended>
+        <cpu>1000000000</cpu>
+        <n-cpus>1</n-cpus>
+        <ram>805306368</ram>
+        <storage>4294967296</storage>
+      </recommended>
+    </resources>
+    <media arch="i686">
+      <iso>
+        <volume-id>alpine-.* 3.6.\d x86$</volume-id>
+      </iso>
+    </media>
+    <media arch="x86_64">
+      <iso>
+        <volume-id>alpine-.* 3.6.\d x86_64.*</volume-id>
+      </iso>
+    </media>
+  </os>
+</libosinfo>

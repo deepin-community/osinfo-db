@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+for r in $(seq 6 11) testing; do
+    DEB="debian${r}"
+    osinfo-install-script "${DEB}"
+    if [ -f preseed.cfg ]; then
+        echo "Found install script for ${DEB}"
+        rm preseed.cfg
+    else
+        echo "No install script for ${DEB} found"
+	exit 1
+    fi
+done

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+INTERNAL_OSINFO_DB_DATA_DIR=/usr/share/osinfo python3 -m pytest tests

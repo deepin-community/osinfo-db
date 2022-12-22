@@ -1,0 +1,35 @@
+This package is maintained with git-buildpackage(1). It follows DEP-14
+for branch naming (e.g. using debian/sid for the current version
+in Debian unstable).
+
+It uses pristine-tar(1) to store enough information in git to generate
+bit identical tarballs when building the package without having
+downloaded an upstream tarball first.
+
+When working with patches it is recommended to use "gbp pq import" to
+import the patches, modify the source and then use "gbp pq export
+--commit" to commit the modifications.
+
+The changelog is generated using "gbp dch" so if you submit any
+changes don't bother to add changelog entries but rather provide
+a nice git commit message that can then end up in the changelog.
+
+It is recommended to build the package with pbuilder using:
+
+    gbp builpackage --git-pbuilder
+
+For information on how to set up a pbuilder environment see the
+git-pbuilder(1) manpage. In short:
+
+    DIST=sid git-pbuilder create
+    gbp clone https://anonscm.debian.org/git/pkg-libvirt/osinfo-db.git
+    cd os-info-db-tools
+    gbp buildpackage --git-pbuilder
+
+The upstream tarballs are not used, since they do not contain all the sources
+(reported as upstream bug https://gitlab.com/libosinfo/osinfo-db/-/issues/50).
+Hence, to generate an upstream tarball you need to use the provided
+debian/get-orig-source.py script, which will create one from the upstream git
+repository at the latest tag available.
+
+ -- Guido Günther <agx@sigxcpu.org>, Wed,  2 Dec 2015 18:51:15 +0100

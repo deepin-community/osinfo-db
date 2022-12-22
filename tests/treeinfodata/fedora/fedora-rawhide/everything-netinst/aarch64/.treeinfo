@@ -1,0 +1,53 @@
+[checksums]
+images/boot.iso = sha256:98d95779e9c573b33ed73d67c3d454de09e54fb07a78c3547979405ec3018b45
+images/efiboot.img = sha256:9d6887d1c1e3ee7a9ccc59bfedb36d030a493112af09b1f2d6e0dc6619ea9d3c
+images/install.img = sha256:ec0d58a40a4dbaf3e04669357c57bd8a4070fcbbd6ace5e45eced317062ae371
+images/pxeboot/initrd.img = sha256:04003c385744e131c4f5ebd699fcd23050bc3af1fa480eab38376d594a0a2115
+images/pxeboot/vmlinuz = sha256:431a1f4899270fdfb1c9198b76b48615192da9f2db50372443dc5a4505742bf4
+
+[general]
+; WARNING.0 = This section provides compatibility with pre-productmd treeinfos.
+; WARNING.1 = Read productmd documentation for details about new format.
+arch = aarch64
+family = Fedora
+name = Fedora Rawhide
+packagedir = Packages
+platforms = aarch64
+repository = .
+timestamp = 1600332283
+variant = Everything
+variants = Everything
+version = Rawhide
+
+[header]
+type = productmd.treeinfo
+version = 1.2
+
+[images-aarch64]
+boot.iso = images/boot.iso
+efiboot.img = images/efiboot.img
+initrd = images/pxeboot/initrd.img
+kernel = images/pxeboot/vmlinuz
+
+[release]
+name = Fedora
+short = Fedora
+version = Rawhide
+
+[stage2]
+mainimage = images/install.img
+
+[tree]
+arch = aarch64
+build_timestamp = 1600332283
+platforms = aarch64
+variants = Everything
+
+[variant-Everything]
+id = Everything
+name = Everything
+packages = Packages
+repository = .
+type = variant
+uid = Everything
+

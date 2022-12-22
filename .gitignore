@@ -1,0 +1,7 @@
+__pycache__/
+data/**/*.xml
+data/**/*.rng
+install/
+rpmbuild/
+*.spec
+*.tar.xz

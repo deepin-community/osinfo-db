@@ -1,0 +1,32 @@
+#!/usr/bin/make -f
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+COMMON_MAKE_ARGS = -f ../Makefile VPATH=..
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+COMMON_MAKE_ARGS += -j $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+endif
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	mkdir build
+	make -C build $(COMMON_MAKE_ARGS) ARCHIVE=osinfo-db.tar.xz
+	
+override_dh_auto_clean:
+	rm -rf build
+	dh_auto_clean
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	make -C build $(COMMON_MAKE_ARGS) check
+endif
+
+override_dh_auto_install:
+	osinfo-db-import \
+	    --root debian/osinfo-db/ \
+	    --dir /usr/share/osinfo \
+	    build/osinfo-db.tar.xz
+	rm debian/osinfo-db/usr/share/osinfo/LICENSE

@@ -1,0 +1,29 @@
+Source: osinfo-db
+Section: libs
+Priority: optional
+Maintainer: Guido Günther <agx@sigxcpu.org>
+Uploaders: Pino Toscano <pino@debian.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ gettext,
+ locales-all <!nocheck>,
+ osinfo-db-tools,
+ python3-lxml <!nocheck>,
+ python3-pytest <!nocheck>,
+Standards-Version: 4.6.0
+Homepage: https://libosinfo.org/
+Vcs-Git: https://salsa.debian.org/libvirt-team/osinfo-db.git
+Vcs-Browser: https://salsa.debian.org/libvirt-team/osinfo-db
+Rules-Requires-Root: no
+
+Package: osinfo-db
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: Operating system database files
+ libosinfo is a GObject based library API for managing information about
+ operating systems, hypervisors and the (virtual) hardware devices they
+ can support. It provides APIs to match/identify optimal devices for deploying
+ an operating system on a hypervisor.
+ .
+ This package contains the actual database files.
