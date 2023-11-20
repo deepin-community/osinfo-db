@@ -103,10 +103,23 @@ def adj(series, delta):
 
 
 def predecessor(series):
+    # Branching/Numbering scheme changed slightly in the transition from
+    # eos3.9 → eos4.0 and eos5.0
+    if series == "4.0":
+        return "3.9"
+    if series == "5.0":
+        return "4.0"
     return adj(series, -1)
 
 
 def successor(series):
+    # Branching/Numbering scheme changed slightly in the transition from
+    # eos3.9 → eos4.0 and eos5.0
+    if series == "3.9":
+        return "4.0"
+    if series == "4.0":
+        return "5.0"
+
     return adj(series, 1)
 
 
@@ -136,7 +149,7 @@ def fetch_isodata(branch, iso):
         return
     print(f"Fetching first 2MiB of {iso_url}...")
 
-    response = requests.get(iso_url, headers={"Range": f"bytes=0-2097152"}, stream=True)
+    response = requests.get(iso_url, headers={"Range": "bytes=0-2097152"}, stream=True)
     with tempfile.NamedTemporaryFile(suffix=os.path.basename(iso_url)) as f:
         for chunk in response.iter_content(chunk_size=8096):
             f.write(chunk)
@@ -146,7 +159,9 @@ def fetch_isodata(branch, iso):
         os.makedirs(os.path.dirname(isodata_file), exist_ok=True)
         with open(isodata_file, "w") as g:
             subprocess.run(
-                ("isoinfo", "-d", "-i", f.name), stdout=g, check=True,
+                ("isoinfo", "-d", "-i", f.name),
+                stdout=g,
+                check=True,
             )
 
 
@@ -231,37 +246,21 @@ def main():
         if eol_date is None:
             fetch_all_isodata(image)
 
-    # Depending on where we are in the development cycle, there are either 1 or
-    # 2 branches of Endless OS for which unreleased images exist, beyond the
-    # latest public eos3.X branch:
-    #
-    # - if we have branched for the next release series, eos3.(X+1)
-    # - the master branch, which is eos3.(X+1) if we haven't branched, and
-    #   eos3.(X+2) if we have
-    #
-    # Assume we are in the "2 branches" case, since it is harmless to match
-    # images which don't exist.
-    future_series = [next_series, successor(next_series)]
-    # Assume that future branches will have the same set of personalities as
-    # the latest public release.
-    future_personalities = image["personality_images"].keys()
-
-    for current_series in future_series:
-        xml = template.render(
-            base_url=BASE_URL,
-            image={
-                "branch": f"eos{current_series}",
-                # No (public) download URLs
-                "personality_images": {},
-            },
-            release_date=None,
-            current_series=current_series,
-            previous_series=predecessor(current_series),
-            eol_date=None,
-            retired_personalities=future_personalities,
-        )
-        with open(os.path.join(DATA_DIR, f"eos-{current_series}.xml.in"), "w") as f:
-            f.write(xml)
+        # We had an entry for eos3.10 in osinfo-db, which actually ended up being
+        # released as eos4.0. Since we can never remove entries from osinfo-db,
+        # generate it as an EOLed clone of eos4.0, with no images.
+        if current_series == "4.0":
+            xml = template.render(
+                base_url=BASE_URL,
+                image={"branch": "eos3.10", "personality_images": {}},
+                release_date=None,
+                current_series="3.10",
+                previous_series=previous_series,
+                eol_date=release_date,
+                retired_personalities=[],
+            )
+            with open(os.path.join(DATA_DIR, "eos-3.10.xml.in"), "w") as f:
+                f.write(xml)
 
 
 if __name__ == "__main__":

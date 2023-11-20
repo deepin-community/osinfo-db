@@ -1,7 +1,7 @@
 # This work is licensed under the GNU GPLv2 or later.
 # See the COPYING file in the top-level directory.
 
-import os
+from pathlib import Path
 
 from . import util
 
@@ -13,25 +13,22 @@ def _test_validate_ids(xml, entity_type):
     This check tries to mimic, in a pythonic way, the very same
     check done by OsinfoLoader::osinfo_loader_check_id()
     """
-    relpath = os.path.relpath(xml.filename)
-    expected_filename = relpath.split(entity_type + "/")[1]
+    base = Path("data", entity_type)
+    relpath = xml.path.relative_to(base)
 
-    extension = bool(".d/" in expected_filename)
+    suffix = xml.internal_id[len("http://") :]
+    vendor = suffix.split("/", 1)[0]
+    entity_name = suffix.split("/", 1)[1].replace("/", "-")
 
-    suffix = xml.internal_id[len('http://'):]
-    vendor = suffix.split('/', 1)[0]
-    entity_name = suffix.split('/', 1)[1].replace("/", "-")
-
-    if extension:
+    if relpath.parent.suffix == ".d":
         filename = vendor + "/" + entity_name + ".d"
-        assert filename == expected_filename.rsplit("/", 1)[0]
+        assert filename == str(relpath.parent)
     else:
         filename = vendor + "/" + entity_name + ".xml"
-        assert filename == expected_filename
+        assert filename == str(relpath)
 
 
-
-@util.os_parametrize('osxml')
+@util.os_parametrize("osxml")
 def test_validate_os_ids(osxml):
     """
     Ensure the OS ids are the ones supported by OsinfoLoader.
@@ -39,7 +36,7 @@ def test_validate_os_ids(osxml):
     return _test_validate_ids(osxml, "os")
 
 
-@util.device_parametrize('devicexml')
+@util.device_parametrize("devicexml")
 def test_validate_device_ids(devicexml):
     """
     Ensure the Device ids are the ones supported by OsinfoLoader.
@@ -47,7 +44,7 @@ def test_validate_device_ids(devicexml):
     return _test_validate_ids(devicexml, "device")
 
 
-@util.datamap_parametrize('datamapxml')
+@util.datamap_parametrize("datamapxml")
 def test_validate_datamap_ids(datamapxml):
     """
     Ensure the Datamap ids are the ones supported by OsinfoLoader.
@@ -55,7 +52,7 @@ def test_validate_datamap_ids(datamapxml):
     return _test_validate_ids(datamapxml, "datamap")
 
 
-@util.installscript_parametrize('installscriptxml')
+@util.installscript_parametrize("installscriptxml")
 def test_validate_installscript_ids(installscriptxml):
     """
     Ensure the InstallScript ids are the ones supported by OsinfoLoader.
@@ -63,7 +60,7 @@ def test_validate_installscript_ids(installscriptxml):
     return _test_validate_ids(installscriptxml, "install-script")
 
 
-@util.platform_parametrize('platformxml')
+@util.platform_parametrize("platformxml")
 def test_validate_platform_ids(platformxml):
     """
     Ensure the Platform ids are the ones supported by OsinfoLoader.

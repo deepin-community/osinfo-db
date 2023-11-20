@@ -1,0 +1,15 @@
+<libosinfo version="0.0.1">
+<!-- Licensed under the GNU General Public License version 2 or later.
+     See http://www.gnu.org/licenses/ for a copy of the license text -->
+  <os id="http://rockylinux.org/rocky/8.6">
+    <short-id>rocky8.6</short-id>
+    <name>Rocky Linux 8.6</name>
+    <version>8.6</version>
+    <vendor>Rocky Enterprise Software Foundation</vendor>
+    <family>linux</family>
+    <distro>rocky</distro>
+    <derives-from id="http://rockylinux.org/rocky/8"/>
+    <eol-date>2022-08-02</eol-date>
+    <resources arch='all' inherit='true'/>
+  </os>
+</libosinfo>

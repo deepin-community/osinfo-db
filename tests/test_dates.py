@@ -9,9 +9,12 @@ from . import util
 
 
 if sys.version_info >= (3, 7):
+
     def _parse_iso_date(date_string):
         return datetime.date.fromisoformat(date_string)
+
 else:
+
     def _parse_iso_date(date_string):
         m = re.match("([0-9]{4})-([0-9]{2})-([0-9]{2})", date_string)
         assert m
@@ -24,7 +27,7 @@ def _parse_date(date_string):
     return _parse_iso_date(date_string)
 
 
-@util.os_parametrize('osxml', filter_dates=True)
+@util.os_parametrize("osxml", filter_dates=True)
 def test_dates(osxml):
     release_date = _parse_date(osxml.release_date)
     eol_date = _parse_date(osxml.eol_date)

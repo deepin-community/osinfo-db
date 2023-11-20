@@ -12,16 +12,16 @@ DEVICE_MAP_SRC = {d.internal_id: d for d in util.SourceFiles.devices()}
 
 def _check_duplicate_devices(osxml):
     """
-    Ensure an OS doesn't list a device that's defined in the parent
+    Ensure an OS doesn't list a device that's enabled, and not eventually
+    disabled, in a parent OS
     """
-    broken = []
     related = util.DataFiles.getosxml_related(osxml)
-    for osxml2 in related:
-        if osxml2.devices is not None:
-            for device in osxml2.devices:
-                if device in osxml.devices:
-                    broken.append(device)
-    assert broken == []
+    inherited_devices = set()
+    for osxml2 in reversed(related):
+        inherited_devices.update(set(osxml2.devices))
+        inherited_devices.difference_update(osxml2.devices_unsupported)
+
+    assert set(osxml.devices).intersection(inherited_devices) == set()
 
 
 def _check_uncommented_devices(osxml):
@@ -30,8 +30,11 @@ def _check_uncommented_devices(osxml):
     the device string name in it. This helps readability/grepability
     """
     badlines = []
-    devlines = [l for l in open(osxml.filename).read().splitlines() if
-                "<device id" in l]
+    devlines = [
+        line
+        for line in osxml.path.open("r").read().splitlines()
+        if "<device id" in line
+    ]
 
     for devid in osxml.devices:
         devname = DEVICE_MAP_SRC[devid].name
@@ -42,16 +45,17 @@ def _check_uncommented_devices(osxml):
                 badlines.append(devline)
 
     if badlines:
-        raise AssertionError("shortid=%s device lines don't contain a "
-                "comment with the device name:\n%s" %
-                (osxml.shortid, badlines))
+        raise AssertionError(
+            "shortid=%s device lines don't contain a "
+            "comment with the device name:\n%s" % (osxml.shortid, badlines)
+        )
 
 
-@util.os_parametrize('osxml', filter_devices=True)
+@util.os_parametrize("osxml", filter_devices=True)
 def test_devices_duplication(osxml):
     _check_duplicate_devices(osxml)
 
 
-@util.os_sources_parametrize('osxml', filter_devices=True)
+@util.os_sources_parametrize("osxml", filter_devices=True)
 def test_devices_comments(osxml):
     _check_uncommented_devices(osxml)

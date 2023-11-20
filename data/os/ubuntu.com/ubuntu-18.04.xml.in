@@ -31,16 +31,12 @@
       </recommended>
     </resources>
 
-    <media arch="x86_64" live="true" installer-script="false">
-      <url>http://old-releases.ubuntu.com/releases/bionic/ubuntu-18.04.3-server-amd64.iso</url>
-      <iso>
-        <volume-id>Ubuntu-Server 18.04(.\d\+?)?(.\d\+?)? LTS amd64</volume-id>
-      </iso>
-      <kernel>casper/vmlinuz</kernel>
-      <initrd>casper/initrd</initrd>
-    </media>
+    <devices>
+      <device id="http://pcisig.com/pci/1af4/1050"/> <!-- virtio1.0-gpu -->
+    </devices>
+
     <media arch="x86_64" live="true">
-      <url>http://old-releases.ubuntu.com/releases/bionic/ubuntu-18.04.3-desktop-amd64.iso</url>
+      <url>https://releases.ubuntu.com/releases/bionic/ubuntu-18.04.6-desktop-amd64.iso</url>
       <iso>
         <volume-id>Ubuntu 18.04(.\d\+?)?(.\d\+?)? LTS amd64</volume-id>
       </iso>
@@ -50,8 +46,16 @@
         <script id='http://ubuntu.com/ubuntu/preseed/desktop'/>
       </installer>
     </media>
+    <media arch="x86_64" live="true" installer-script="false">
+      <url>https://cdimage.ubuntu.com/ubuntu/releases/bionic/release/ubuntu-18.04.6-server-amd64.iso</url>
+      <iso>
+        <volume-id>Ubuntu-Server 18.04(.\d\+?)?(.\d\+?)? LTS amd64</volume-id>
+      </iso>
+      <kernel>casper/vmlinuz</kernel>
+      <initrd>casper/initrd</initrd>
+    </media>
     <media arch="aarch64">
-      <url>http://old-releases.ubuntu.com/releases/bionic/ubuntu-18.04.3-server-arm64.iso</url>
+      <url>https://cdimage.ubuntu.com/ubuntu/releases/bionic/release/ubuntu-18.04.6-server-arm64.iso</url>
       <iso>
         <volume-id>Ubuntu-Server 18.04(.\d\+?)?(.\d\+?)? LTS arm64</volume-id>
       </iso>
@@ -59,7 +63,7 @@
       <initrd>install/initrd.gz</initrd>
     </media>
     <media arch="ppc64le">
-      <url>http://old-releases.ubuntu.com/releases/bionic/ubuntu-18.04.3-server-ppc64el.iso</url>
+      <url>https://cdimage.ubuntu.com/ubuntu/releases/bionic/release/ubuntu-18.04.5-server-ppc64el.iso</url>
       <iso>
         <volume-id>Ubuntu-Server 18.04(.\d\+?)?(.\d\+?)? LTS ppc64</volume-id>
       </iso>
@@ -67,7 +71,7 @@
       <initrd>install/initrd.gz</initrd>
     </media>
     <media arch="s390x">
-      <url>http://old-releases.ubuntu.com/releases/bionic/ubuntu-18.04.3-server-s390x.iso</url>
+      <url>https://cdimage.ubuntu.com/ubuntu/releases/bionic/release/ubuntu-18.04.5-server-s390x.iso</url>
       <iso>
         <volume-id>Ubuntu-Server 18.04(.\d\+?)?(.\d\+?)? LTS s390x</volume-id>
       </iso>
@@ -112,6 +116,10 @@
 
     <image arch="s390x" format="qcow2" cloud-init="true">
       <url>https://cloud-images.ubuntu.com/bionic/current/bionic-server-cloudimg-s390x.img</url>
+    </image>
+
+    <image arch="x86_64" format="containerdisk" cloud-init="true">
+      <url>docker://quay.io/containerdisks/ubuntu:18.04</url>
     </image>
 
     <installer>

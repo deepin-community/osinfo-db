@@ -1,5 +1,5 @@
-Test-Command: cd debian/tests && nosetests3 -vv
-Depends: @, gir1.2-libosinfo-1.0 (>= 1.0.0), python3, python3-nose, python3-gi
+Test-Command: cd debian/tests && pytest -v
+Depends: @, gir1.2-libosinfo-1.0 (>= 1.0.0), python3, python3-pytest, python3-gi
 Restrictions: allow-stderr
 
 Tests: test-installscript

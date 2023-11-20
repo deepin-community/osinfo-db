@@ -29,6 +29,11 @@
       </recommended>
     </resources>
 
+    <devices>
+      <device id="http://pcisig.com/pci/1af4/1050"/> <!-- virtio1.0-gpu -->
+      <device id="http://pcisig.com/pci/1af4/105a"/> <!-- virtio1.0-fs -->
+    </devices>
+
     <variant id="universal">
       <name>Debian 11</name>
     </variant>
@@ -47,27 +52,27 @@
 
 
     <!-- Network installer -->
-    <media arch="i686">
-      <variant id="universal-netinst"/>
-      <url>http://cdimage.debian.org/cdimage/release/11.1.0/i386/iso-cd/debian-11.1.0-i386-netinst.iso</url>
-      <iso>
-        <volume-id>Debian 11.\d+.\d+ i386 n</volume-id>
-      </iso>
-      <kernel>install.386/vmlinuz</kernel>
-      <initrd>install.386/initrd.gz</initrd>
-    </media>
     <media arch="x86_64">
       <variant id="universal-netinst"/>
-      <url>http://cdimage.debian.org/cdimage/release/11.1.0/amd64/iso-cd/debian-11.1.0-amd64-netinst.iso</url>
+      <url>https://cdimage.debian.org/cdimage/release/11.5.0/amd64/iso-cd/debian-11.5.0-amd64-netinst.iso</url>
       <iso>
         <volume-id>Debian 11.\d+.\d+ amd64 n</volume-id>
       </iso>
       <kernel>install.amd/vmlinuz</kernel>
       <initrd>install.amd/initrd.gz</initrd>
     </media>
+    <media arch="i686">
+      <variant id="universal-netinst"/>
+      <url>https://cdimage.debian.org/cdimage/release/11.5.0/i386/iso-cd/debian-11.5.0-i386-netinst.iso</url>
+      <iso>
+        <volume-id>Debian 11.\d+.\d+ i386 n</volume-id>
+      </iso>
+      <kernel>install.386/vmlinuz</kernel>
+      <initrd>install.386/initrd.gz</initrd>
+    </media>
     <media arch="aarch64">
       <variant id="universal-netinst"/>
-      <url>http://cdimage.debian.org/cdimage/release/11.1.0/arm64/iso-cd/debian-11.1.0-arm64-netinst.iso</url>
+      <url>https://cdimage.debian.org/cdimage/release/11.5.0/arm64/iso-cd/debian-11.5.0-arm64-netinst.iso</url>
       <iso>
         <volume-id>Debian 11.\d+.\d+ arm64 n</volume-id>
       </iso>
@@ -76,7 +81,7 @@
     </media>
     <media arch="armv7l">
       <variant id="universal-netinst"/>
-      <url>http://cdimage.debian.org/cdimage/release/11.1.0/armhf/iso-cd/debian-11.1.0-armhf-netinst.iso</url>
+      <url>https://cdimage.debian.org/cdimage/release/11.5.0/armhf/iso-cd/debian-11.5.0-armhf-netinst.iso</url>
       <iso>
         <volume-id>Debian 11.\d+.\d+ armhf n</volume-id>
       </iso>
@@ -85,7 +90,7 @@
     </media>
     <media arch="ppc64le">
       <variant id="universal-netinst"/>
-      <url>http://cdimage.debian.org/cdimage/release/11.1.0/ppc64el/iso-cd/debian-11.1.0-ppc64el-netinst.iso</url>
+      <url>https://cdimage.debian.org/cdimage/release/11.5.0/ppc64el/iso-cd/debian-11.5.0-ppc64el-netinst.iso</url>
       <iso>
         <volume-id>Debian 11.\d+.\d+ p64el n</volume-id>
       </iso>
@@ -94,7 +99,7 @@
     </media>
     <media arch="s390x">
       <variant id="universal-netinst"/>
-      <url>http://cdimage.debian.org/cdimage/release/11.1.0/s390x/iso-cd/debian-11.1.0-s390x-netinst.iso</url>
+      <url>https://cdimage.debian.org/cdimage/release/11.5.0/s390x/iso-cd/debian-11.5.0-s390x-netinst.iso</url>
       <iso>
         <volume-id>Debian 11.\d+.\d+ s390x n</volume-id>
       </iso>
@@ -103,27 +108,27 @@
     </media>
 
     <!-- DVD -->
-    <media arch="i686">
-      <variant id="universal"/>
-      <url>http://cdimage.debian.org/cdimage/release/11.1.0/i386/iso-dvd/debian-11.1.0-i386-DVD-1.iso</url>
-      <iso>
-        <volume-id>Debian 11.\d+.\d+ i386 \d+</volume-id>
-      </iso>
-      <kernel>install.386/vmlinuz</kernel>
-      <initrd>install.386/initrd.gz</initrd>
-    </media>
     <media arch="x86_64">
       <variant id="universal"/>
-      <url>http://cdimage.debian.org/cdimage/release/11.1.0/amd64/iso-dvd/debian-11.1.0-amd64-DVD-1.iso</url>
+      <url>https://cdimage.debian.org/cdimage/release/11.5.0/amd64/iso-dvd/debian-11.5.0-amd64-DVD-1.iso</url>
       <iso>
         <volume-id>Debian 11.\d+.\d+ amd64 \d+</volume-id>
       </iso>
       <kernel>install.amd/vmlinuz</kernel>
       <initrd>install.amd/initrd.gz</initrd>
     </media>
+    <media arch="i686">
+      <variant id="universal"/>
+      <url>https://cdimage.debian.org/cdimage/release/11.5.0/i386/iso-dvd/debian-11.5.0-i386-DVD-1.iso</url>
+      <iso>
+        <volume-id>Debian 11.\d+.\d+ i386 \d+</volume-id>
+      </iso>
+      <kernel>install.386/vmlinuz</kernel>
+      <initrd>install.386/initrd.gz</initrd>
+    </media>
     <media arch="aarch64">
       <variant id="universal"/>
-      <url>http://cdimage.debian.org/cdimage/release/11.1.0/arm64/iso-dvd/debian-11.1.0-arm64-DVD-1.iso</url>
+      <url>https://cdimage.debian.org/cdimage/release/11.5.0/arm64/iso-dvd/debian-11.5.0-arm64-DVD-1.iso</url>
       <iso>
         <volume-id>Debian 11.\d+.\d+ arm64 \d+</volume-id>
       </iso>
@@ -132,7 +137,7 @@
     </media>
     <media arch="armv7l">
       <variant id="universal"/>
-      <url>http://cdimage.debian.org/cdimage/release/11.1.0/armhf/iso-dvd/debian-11.1.0-armhf-DVD-1.iso</url>
+      <url>https://cdimage.debian.org/cdimage/release/11.5.0/armhf/iso-dvd/debian-11.5.0-armhf-DVD-1.iso</url>
       <iso>
         <volume-id>Debian 11.\d+.\d+ armhf \d+</volume-id>
       </iso>
@@ -141,7 +146,7 @@
     </media>
     <media arch="ppc64le">
       <variant id="universal"/>
-      <url>http://cdimage.debian.org/cdimage/release/11.1.0/ppc64el/iso-dvd/debian-11.1.0-ppc64el-DVD-1.iso</url>
+      <url>https://cdimage.debian.org/cdimage/release/11.5.0/ppc64el/iso-dvd/debian-11.5.0-ppc64el-DVD-1.iso</url>
       <iso>
         <volume-id>Debian 11.\d+.\d+ p64el \d+</volume-id>
       </iso>
@@ -150,7 +155,7 @@
     </media>
     <media arch="s390x">
       <variant id="universal"/>
-      <url>http://cdimage.debian.org/cdimage/release/11.1.0/s390x/iso-dvd/debian-11.1.0-s390x-DVD-1.iso</url>
+      <url>https://cdimage.debian.org/cdimage/release/11.5.0/s390x/iso-dvd/debian-11.5.0-s390x-DVD-1.iso</url>
       <iso>
         <volume-id>Debian 11.\d+.\d+ s390x \d+</volume-id>
       </iso>
@@ -158,15 +163,15 @@
       <initrd>boot/root.bin</initrd>
     </media>
 
-    <tree arch="i686">
-      <url>http://deb.debian.org/debian/dists/bullseye/main/installer-i386</url>
-      <kernel>current/images/netboot/debian-installer/i386/linux</kernel>
-      <initrd>current/images/netboot/debian-installer/i386/initrd.gz</initrd>
-    </tree>
     <tree arch="x86_64">
       <url>http://deb.debian.org/debian/dists/bullseye/main/installer-amd64</url>
       <kernel>current/images/netboot/debian-installer/amd64/linux</kernel>
       <initrd>current/images/netboot/debian-installer/amd64/initrd.gz</initrd>
+    </tree>
+    <tree arch="i686">
+      <url>http://deb.debian.org/debian/dists/bullseye/main/installer-i386</url>
+      <kernel>current/images/netboot/debian-installer/i386/linux</kernel>
+      <initrd>current/images/netboot/debian-installer/i386/initrd.gz</initrd>
     </tree>
     <tree arch="aarch64">
       <url>http://deb.debian.org/debian/dists/bullseye/main/installer-arm64</url>

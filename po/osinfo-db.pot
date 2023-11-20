@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: osinfo-db\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-24 08:45+0200\n"
+"POT-Creation-Date: 2022-11-29 19:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -219,7 +219,12 @@ msgid "AlmaLinux 8"
 msgstr ""
 
 #: data/os/almalinux.org/almalinux-8.xml.in:7
-msgid "AlmaLinux"
+#: data/os/almalinux.org/almalinux-9.xml.in:7
+msgid "AlmaLinux OS Foundation"
+msgstr ""
+
+#: data/os/almalinux.org/almalinux-9.xml.in:5
+msgid "AlmaLinux 9"
 msgstr ""
 
 #: data/os/alpinelinux.org/alpinelinux-3.10.xml.in:7
@@ -231,6 +236,9 @@ msgstr ""
 #: data/os/alpinelinux.org/alpinelinux-3.12.xml.in:9
 #: data/os/alpinelinux.org/alpinelinux-3.13.xml.in:9
 #: data/os/alpinelinux.org/alpinelinux-3.14.xml.in:9
+#: data/os/alpinelinux.org/alpinelinux-3.15.xml.in:9
+#: data/os/alpinelinux.org/alpinelinux-3.16.xml.in:9
+#: data/os/alpinelinux.org/alpinelinux-3.17.xml.in:9
 #: data/os/alpinelinux.org/alpinelinux-3.5.xml.in:8
 #: data/os/alpinelinux.org/alpinelinux-3.6.xml.in:9
 #: data/os/alpinelinux.org/alpinelinux-3.7.xml.in:9
@@ -335,6 +343,66 @@ msgstr ""
 msgid "Alpinelinux 3.14 Xen"
 msgstr ""
 
+#: data/os/alpinelinux.org/alpinelinux-3.15.xml.in:7
+msgid "Alpine Linux 3.15"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.15.xml.in:34
+msgid "Alpinelinux 3.15 Standard"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.15.xml.in:37
+msgid "Alpinelinux 3.15 Extended"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.15.xml.in:40
+msgid "Alpinelinux 3.15 Virtual"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.15.xml.in:43
+msgid "Alpinelinux 3.15 Xen"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.16.xml.in:7
+msgid "Alpine Linux 3.16"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.16.xml.in:34
+msgid "Alpinelinux 3.16 Standard"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.16.xml.in:37
+msgid "Alpinelinux 3.16 Extended"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.16.xml.in:40
+msgid "Alpinelinux 3.16 Virtual"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.16.xml.in:43
+msgid "Alpinelinux 3.16 Xen"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.17.xml.in:7
+msgid "Alpine Linux 3.17"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.17.xml.in:34
+msgid "Alpinelinux 3.17 Standard"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.17.xml.in:37
+msgid "Alpinelinux 3.17 Extended"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.17.xml.in:40
+msgid "Alpinelinux 3.17 Virtual"
+msgstr ""
+
+#: data/os/alpinelinux.org/alpinelinux-3.17.xml.in:43
+msgid "Alpinelinux 3.17 Xen"
+msgstr ""
+
 #: data/os/alpinelinux.org/alpinelinux-3.5.xml.in:6
 msgid "Alpine Linux 3.5"
 msgstr ""
@@ -387,18 +455,51 @@ msgstr ""
 msgid "Alpinelinux 3.9 Xen"
 msgstr ""
 
-#: data/os/altlinux.org/alt-8.0.xml.in:6
-msgid "ALT 8 Education"
+#: data/os/altlinux.org/alt-10.0.xml.in:6
+msgid "ALT 10.0"
 msgstr ""
 
-#: data/os/altlinux.org/alt-8.0.xml.in:8 data/os/altlinux.org/alt-8.1.xml.in:8
-#: data/os/altlinux.org/alt-8.2.xml.in:8 data/os/altlinux.org/alt-9.0.xml.in:8
-#: data/os/altlinux.org/alt-9.1.xml.in:8 data/os/altlinux.org/alt-9.2.xml.in:8
+#: data/os/altlinux.org/alt-10.0.xml.in:8 data/os/altlinux.org/alt-8.0.xml.in:8
+#: data/os/altlinux.org/alt-8.1.xml.in:8 data/os/altlinux.org/alt-8.2.xml.in:8
+#: data/os/altlinux.org/alt-9.0.xml.in:8 data/os/altlinux.org/alt-9.1.xml.in:8
+#: data/os/altlinux.org/alt-9.2.xml.in:8
 #: data/os/altlinux.org/alt-p10.starterkits.xml.in:8
 #: data/os/altlinux.org/alt-p8.starterkits.xml.in:8
 #: data/os/altlinux.org/alt-p9.starterkits.xml.in:8
 #: data/os/altlinux.org/alt-sisyphus.xml.in:8
 msgid "BaseALT"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.0.xml.in:19
+msgid "ALT Workstation 10.0"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.0.xml.in:22
+msgid "ALT Workstation K 10.0"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.0.xml.in:25
+msgid "ALT Education 10.0"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.0.xml.in:28
+msgid "ALT Server 10.0"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.0.xml.in:31
+msgid "ALT Virtualization Server 10.0"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.0.xml.in:34
+msgid "ALT Simply 10.0"
+msgstr ""
+
+#: data/os/altlinux.org/alt-10.0.xml.in:37
+msgid "ALT Simply live 10.0"
+msgstr ""
+
+#: data/os/altlinux.org/alt-8.0.xml.in:6
+msgid "ALT 8 Education"
 msgstr ""
 
 #: data/os/altlinux.org/alt-8.1.xml.in:6
@@ -705,6 +806,51 @@ msgstr ""
 msgid "Asianux unknown"
 msgstr ""
 
+#: data/os/cclinux.org/circle-8-unknown.xml.in:6
+msgid "Circle Linux 8 Unknown"
+msgstr ""
+
+#: data/os/cclinux.org/circle-8-unknown.xml.in:8
+#: data/os/cclinux.org/circle-8.4.xml.in:8
+#: data/os/cclinux.org/circle-8.5.xml.in:8
+#: data/os/cclinux.org/circle-9-unknown.xml.in:8
+#: data/os/cclinux.org/circle-9.0.xml.in:8
+#: data/os/cclinux.org/circle-unknown.xml.in:8
+msgid "Circle Linux Project"
+msgstr ""
+
+#: data/os/cclinux.org/circle-8.4.xml.in:6
+msgid "Circle Linux 8.4"
+msgstr ""
+
+#: data/os/cclinux.org/circle-8.4.xml.in:17
+#: data/os/cclinux.org/circle-8.4.xml.in:21
+#: data/os/cclinux.org/circle-8.4.xml.in:25
+msgid "Circle 8.4"
+msgstr ""
+
+#: data/os/cclinux.org/circle-8.5.xml.in:6
+msgid "Circle Linux 8.5"
+msgstr ""
+
+#: data/os/cclinux.org/circle-8.5.xml.in:20
+#: data/os/cclinux.org/circle-8.5.xml.in:24
+#: data/os/cclinux.org/circle-8.5.xml.in:28
+msgid "Circle 8.5"
+msgstr ""
+
+#: data/os/cclinux.org/circle-9-unknown.xml.in:6
+msgid "Circle Linux 9 Unknown"
+msgstr ""
+
+#: data/os/cclinux.org/circle-9.0.xml.in:6
+msgid "Circle Linux 9.0"
+msgstr ""
+
+#: data/os/cclinux.org/circle-unknown.xml.in:6
+msgid "Circle Linux Unknown"
+msgstr ""
+
 #: data/os/centos.org/centos-5.0.xml.in:6
 msgid "CentOS 5.0"
 msgstr ""
@@ -847,7 +993,7 @@ msgid "CentOS 8"
 msgstr ""
 
 #: data/os/centos.org/centos-stream-8.xml.in:6
-#: data/os/centos.org/centos-stream-8.xml.in:43
+#: data/os/centos.org/centos-stream-8.xml.in:44
 msgid "CentOS Stream 8"
 msgstr ""
 
@@ -964,20 +1110,20 @@ msgstr ""
 msgid "Debian 10 (No Cloud)"
 msgstr ""
 
-#: data/os/debian.org/debian-11.xml.in:7 data/os/debian.org/debian-11.xml.in:33
-#: data/os/debian.org/debian-11.xml.in:36
+#: data/os/debian.org/debian-11.xml.in:7 data/os/debian.org/debian-11.xml.in:38
+#: data/os/debian.org/debian-11.xml.in:41
 msgid "Debian 11"
 msgstr ""
 
-#: data/os/debian.org/debian-11.xml.in:39
+#: data/os/debian.org/debian-11.xml.in:44
 msgid "Debian 11 (Generic)"
 msgstr ""
 
-#: data/os/debian.org/debian-11.xml.in:42
+#: data/os/debian.org/debian-11.xml.in:47
 msgid "Debian 11 (Generic Cloud)"
 msgstr ""
 
-#: data/os/debian.org/debian-11.xml.in:45
+#: data/os/debian.org/debian-11.xml.in:50
 msgid "Debian 11 (No Cloud)"
 msgstr ""
 
@@ -1021,21 +1167,19 @@ msgstr ""
 msgid "Debian 8"
 msgstr ""
 
-#: data/os/debian.org/debian-9.xml.in:7 data/os/debian.org/debian-9.xml.in:47
-#: data/os/debian.org/debian-9.xml.in:50
+#: data/os/debian.org/debian-9.xml.in:7 data/os/debian.org/debian-9.xml.in:48
+#: data/os/debian.org/debian-9.xml.in:51
 msgid "Debian 9"
 msgstr ""
 
-#: data/os/debian.org/debian-9.xml.in:53
+#: data/os/debian.org/debian-9.xml.in:54
 msgid "Debian 9 (OpenStack)"
 msgstr ""
 
 #: data/os/debian.org/debian-testing.xml.in:6
-msgid "Debian testing"
-msgstr ""
-
 #: data/os/debian.org/debian-testing.xml.in:29
-msgid "Debian testing (OpenStack)"
+#: data/os/debian.org/debian-testing.xml.in:32
+msgid "Debian testing"
 msgstr ""
 
 #: data/os/dragonflybsd.org/dragonflybsd-1.0.xml.in:6
@@ -1402,7 +1546,6 @@ msgid "Endless OS Arabic"
 msgstr ""
 
 #: data/os/endlessos.com/eos-3.1.xml.in:32
-#: data/os/endlessos.com/eos-3.10.xml.in:21
 #: data/os/endlessos.com/eos-3.2.xml.in:37
 #: data/os/endlessos.com/eos-3.3.xml.in:37
 #: data/os/endlessos.com/eos-3.4.xml.in:24
@@ -1410,7 +1553,8 @@ msgstr ""
 #: data/os/endlessos.com/eos-3.6.xml.in:52
 #: data/os/endlessos.com/eos-3.7.xml.in:24
 #: data/os/endlessos.com/eos-3.8.xml.in:24
-#: data/os/endlessos.com/eos-3.9.xml.in:22
+#: data/os/endlessos.com/eos-3.9.xml.in:24
+#: data/os/endlessos.com/eos-4.0.xml.in:22
 msgid "Endless OS Basic"
 msgstr ""
 
@@ -1419,7 +1563,6 @@ msgid "Endless OS Bengali"
 msgstr ""
 
 #: data/os/endlessos.com/eos-3.1.xml.in:58
-#: data/os/endlessos.com/eos-3.10.xml.in:33
 #: data/os/endlessos.com/eos-3.2.xml.in:63
 #: data/os/endlessos.com/eos-3.3.xml.in:63
 #: data/os/endlessos.com/eos-3.4.xml.in:37
@@ -1427,12 +1570,12 @@ msgstr ""
 #: data/os/endlessos.com/eos-3.6.xml.in:65
 #: data/os/endlessos.com/eos-3.7.xml.in:37
 #: data/os/endlessos.com/eos-3.8.xml.in:37
-#: data/os/endlessos.com/eos-3.9.xml.in:35
+#: data/os/endlessos.com/eos-3.9.xml.in:37
+#: data/os/endlessos.com/eos-4.0.xml.in:35
 msgid "Endless OS English"
 msgstr ""
 
 #: data/os/endlessos.com/eos-3.1.xml.in:71
-#: data/os/endlessos.com/eos-3.10.xml.in:45
 #: data/os/endlessos.com/eos-3.2.xml.in:76
 #: data/os/endlessos.com/eos-3.3.xml.in:76
 #: data/os/endlessos.com/eos-3.4.xml.in:50
@@ -1440,7 +1583,8 @@ msgstr ""
 #: data/os/endlessos.com/eos-3.6.xml.in:78
 #: data/os/endlessos.com/eos-3.7.xml.in:50
 #: data/os/endlessos.com/eos-3.8.xml.in:50
-#: data/os/endlessos.com/eos-3.9.xml.in:48
+#: data/os/endlessos.com/eos-3.9.xml.in:50
+#: data/os/endlessos.com/eos-4.0.xml.in:48
 msgid "Endless OS Spanish"
 msgstr ""
 
@@ -1460,7 +1604,6 @@ msgid "Endless OS Spanish (Mexico)"
 msgstr ""
 
 #: data/os/endlessos.com/eos-3.1.xml.in:110
-#: data/os/endlessos.com/eos-3.10.xml.in:57
 #: data/os/endlessos.com/eos-3.2.xml.in:115
 #: data/os/endlessos.com/eos-3.3.xml.in:115
 #: data/os/endlessos.com/eos-3.4.xml.in:63
@@ -1468,7 +1611,8 @@ msgstr ""
 #: data/os/endlessos.com/eos-3.6.xml.in:91
 #: data/os/endlessos.com/eos-3.7.xml.in:63
 #: data/os/endlessos.com/eos-3.8.xml.in:63
-#: data/os/endlessos.com/eos-3.9.xml.in:61
+#: data/os/endlessos.com/eos-3.9.xml.in:63
+#: data/os/endlessos.com/eos-4.0.xml.in:61
 msgid "Endless OS French"
 msgstr ""
 
@@ -1484,7 +1628,6 @@ msgid "Endless OS Indonesian"
 msgstr ""
 
 #: data/os/endlessos.com/eos-3.1.xml.in:136
-#: data/os/endlessos.com/eos-3.10.xml.in:69
 #: data/os/endlessos.com/eos-3.2.xml.in:141
 #: data/os/endlessos.com/eos-3.3.xml.in:141
 #: data/os/endlessos.com/eos-3.4.xml.in:89
@@ -1492,7 +1635,8 @@ msgstr ""
 #: data/os/endlessos.com/eos-3.6.xml.in:117
 #: data/os/endlessos.com/eos-3.7.xml.in:89
 #: data/os/endlessos.com/eos-3.8.xml.in:76
-#: data/os/endlessos.com/eos-3.9.xml.in:74
+#: data/os/endlessos.com/eos-3.9.xml.in:76
+#: data/os/endlessos.com/eos-4.0.xml.in:74
 msgid "Endless OS Portuguese (Brazil)"
 msgstr ""
 
@@ -1530,7 +1674,7 @@ msgid "Endless OS Southeast Asia"
 msgstr ""
 
 #: data/os/endlessos.com/eos-3.1.xml.in:201
-#: data/os/endlessos.com/eos-3.10.xml.in:81
+#: data/os/endlessos.com/eos-3.10.xml.in:23
 #: data/os/endlessos.com/eos-3.2.xml.in:194
 #: data/os/endlessos.com/eos-3.3.xml.in:194
 #: data/os/endlessos.com/eos-3.4.xml.in:189
@@ -1538,7 +1682,8 @@ msgstr ""
 #: data/os/endlessos.com/eos-3.6.xml.in:157
 #: data/os/endlessos.com/eos-3.7.xml.in:141
 #: data/os/endlessos.com/eos-3.8.xml.in:126
-#: data/os/endlessos.com/eos-3.9.xml.in:88
+#: data/os/endlessos.com/eos-3.9.xml.in:90
+#: data/os/endlessos.com/eos-4.0.xml.in:88
 msgid "Endless OS (other)"
 msgstr ""
 
@@ -1582,11 +1727,16 @@ msgstr ""
 
 #: data/os/endlessos.com/eos-3.8.xml.in:8
 #: data/os/endlessos.com/eos-3.9.xml.in:8
+#: data/os/endlessos.com/eos-4.0.xml.in:8
 msgid "Endless OS Foundation LLC"
 msgstr ""
 
 #: data/os/endlessos.com/eos-3.9.xml.in:6
 msgid "Endless OS 3.9"
+msgstr ""
+
+#: data/os/endlessos.com/eos-4.0.xml.in:6
+msgid "Endless OS 4.0"
 msgstr ""
 
 #: data/os/fedoraproject.org/coreos-next.xml.in:6
@@ -1626,12 +1776,16 @@ msgstr ""
 #: data/os/fedoraproject.org/fedora-32.xml.in:8
 #: data/os/fedoraproject.org/fedora-33.xml.in:8
 #: data/os/fedoraproject.org/fedora-34.xml.in:8
+#: data/os/fedoraproject.org/fedora-35.xml.in:8
+#: data/os/fedoraproject.org/fedora-36.xml.in:8
+#: data/os/fedoraproject.org/fedora-37.xml.in:8
 #: data/os/fedoraproject.org/fedora-4.xml.in:8
 #: data/os/fedoraproject.org/fedora-5.xml.in:8
 #: data/os/fedoraproject.org/fedora-6.xml.in:8
 #: data/os/fedoraproject.org/fedora-7.xml.in:8
 #: data/os/fedoraproject.org/fedora-8.xml.in:8
 #: data/os/fedoraproject.org/fedora-9.xml.in:8
+#: data/os/fedoraproject.org/fedora-eln.xml.in:8
 #: data/os/fedoraproject.org/fedora-rawhide.xml.in:8
 #: data/os/fedoraproject.org/fedora-unknown.xml.in:8
 #: data/os/fedoraproject.org/silverblue-28.xml.in:8
@@ -1641,6 +1795,9 @@ msgstr ""
 #: data/os/fedoraproject.org/silverblue-32.xml.in:8
 #: data/os/fedoraproject.org/silverblue-33.xml.in:8
 #: data/os/fedoraproject.org/silverblue-34.xml.in:8
+#: data/os/fedoraproject.org/silverblue-35.xml.in:8
+#: data/os/fedoraproject.org/silverblue-36.xml.in:8
+#: data/os/fedoraproject.org/silverblue-37.xml.in:8
 #: data/os/fedoraproject.org/silverblue-rawhide.xml.in:8
 #: data/os/fedoraproject.org/silverblue-unknown.xml.in:8
 msgid "Fedora Project"
@@ -1892,16 +2049,16 @@ msgstr ""
 msgid "Fedora 33"
 msgstr ""
 
-#: data/os/fedoraproject.org/fedora-33.xml.in:17
+#: data/os/fedoraproject.org/fedora-33.xml.in:18
 msgid "Fedora 33 Workstation"
 msgstr ""
 
-#: data/os/fedoraproject.org/fedora-33.xml.in:20
-#: data/os/fedoraproject.org/fedora-33.xml.in:23
+#: data/os/fedoraproject.org/fedora-33.xml.in:21
+#: data/os/fedoraproject.org/fedora-33.xml.in:24
 msgid "Fedora 33 Server"
 msgstr ""
 
-#: data/os/fedoraproject.org/fedora-33.xml.in:26
+#: data/os/fedoraproject.org/fedora-33.xml.in:27
 msgid "Fedora 33 Everything"
 msgstr ""
 
@@ -1909,17 +2066,68 @@ msgstr ""
 msgid "Fedora 34"
 msgstr ""
 
-#: data/os/fedoraproject.org/fedora-34.xml.in:17
+#: data/os/fedoraproject.org/fedora-34.xml.in:18
 msgid "Fedora 34 Workstation"
 msgstr ""
 
-#: data/os/fedoraproject.org/fedora-34.xml.in:20
-#: data/os/fedoraproject.org/fedora-34.xml.in:23
+#: data/os/fedoraproject.org/fedora-34.xml.in:21
+#: data/os/fedoraproject.org/fedora-34.xml.in:24
 msgid "Fedora 34 Server"
 msgstr ""
 
-#: data/os/fedoraproject.org/fedora-34.xml.in:26
+#: data/os/fedoraproject.org/fedora-34.xml.in:27
 msgid "Fedora 34 Everything"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-35.xml.in:6
+msgid "Fedora 35"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-35.xml.in:17
+msgid "Fedora 35 Workstation"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-35.xml.in:20
+#: data/os/fedoraproject.org/fedora-35.xml.in:23
+msgid "Fedora 35 Server"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-35.xml.in:26
+msgid "Fedora 35 Everything"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-36.xml.in:6
+msgid "Fedora Linux 36"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-36.xml.in:17
+msgid "Fedora Workstation 36"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-36.xml.in:20
+#: data/os/fedoraproject.org/fedora-36.xml.in:23
+msgid "Fedora Server 36"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-36.xml.in:26
+msgid "Fedora Everything 36"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-37.xml.in:6
+msgid "Fedora Linux 37"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-37.xml.in:17
+msgid "Fedora Workstation 37"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-37.xml.in:20
+#: data/os/fedoraproject.org/fedora-37.xml.in:23
+msgid "Fedora Server 37"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-37.xml.in:26
+msgid "Fedora Everything 37"
 msgstr ""
 
 #: data/os/fedoraproject.org/fedora-4.xml.in:6
@@ -1944,6 +2152,10 @@ msgstr ""
 
 #: data/os/fedoraproject.org/fedora-9.xml.in:6
 msgid "Fedora 9"
+msgstr ""
+
+#: data/os/fedoraproject.org/fedora-eln.xml.in:6
+msgid "Fedora ELN"
 msgstr ""
 
 #: data/os/fedoraproject.org/fedora-rawhide.xml.in:6
@@ -1994,6 +2206,18 @@ msgstr ""
 msgid "Fedora Silverblue 34"
 msgstr ""
 
+#: data/os/fedoraproject.org/silverblue-35.xml.in:6
+msgid "Fedora Silverblue 35"
+msgstr ""
+
+#: data/os/fedoraproject.org/silverblue-36.xml.in:6
+msgid "Fedora Silverblue 36"
+msgstr ""
+
+#: data/os/fedoraproject.org/silverblue-37.xml.in:6
+msgid "Fedora Silverblue 37"
+msgstr ""
+
 #: data/os/fedoraproject.org/silverblue-rawhide.xml.in:6
 msgid "Fedora Silverblue Rawhide"
 msgstr ""
@@ -2020,7 +2244,9 @@ msgstr ""
 #: data/os/freebsd.org/freebsd-12.0.xml.in:8
 #: data/os/freebsd.org/freebsd-12.1.xml.in:8
 #: data/os/freebsd.org/freebsd-12.2.xml.in:8
+#: data/os/freebsd.org/freebsd-12.3.xml.in:8
 #: data/os/freebsd.org/freebsd-13.0.xml.in:8
+#: data/os/freebsd.org/freebsd-13.1.xml.in:8
 #: data/os/freebsd.org/freebsd-2.0.5.xml.in:8
 #: data/os/freebsd.org/freebsd-2.0.xml.in:8
 #: data/os/freebsd.org/freebsd-2.2.8.xml.in:8
@@ -2120,8 +2346,16 @@ msgstr ""
 msgid "FreeBSD 12.2"
 msgstr ""
 
+#: data/os/freebsd.org/freebsd-12.3.xml.in:6
+msgid "FreeBSD 12.3"
+msgstr ""
+
 #: data/os/freebsd.org/freebsd-13.0.xml.in:6
 msgid "FreeBSD 13.0"
+msgstr ""
+
+#: data/os/freebsd.org/freebsd-13.1.xml.in:6
+msgid "FreeBSD 13.1"
 msgstr ""
 
 #: data/os/freebsd.org/freebsd-2.0.5.xml.in:6
@@ -2316,6 +2550,18 @@ msgstr ""
 msgid "FreeDOS 1.2 \"Legacy\" Installer"
 msgstr ""
 
+#: data/os/freenix.net/freenix-14.2.xml.in:7
+msgid "Freenix 14.2"
+msgstr ""
+
+#: data/os/freenix.net/freenix-14.2.xml.in:9
+msgid "Freenix Project"
+msgstr ""
+
+#: data/os/freenix.net/freenix-14.2.xml.in:16
+msgid "freenix"
+msgstr ""
+
 #: data/os/gentoo.org/gentoo-rolling.xml.in:6
 msgid "Gentoo Linux"
 msgstr ""
@@ -2356,7 +2602,26 @@ msgid "Guix 1.1"
 msgstr ""
 
 #: data/os/guix.gnu.org/guix-1.1.xml.in:8
+#: data/os/guix.gnu.org/guix-1.3.xml.in:8
+#: data/os/guix.gnu.org/guix-hurd-latest.xml.in:7
+#: data/os/guix.gnu.org/guix-latest.xml.in:7
 msgid "Guix Contributors"
+msgstr ""
+
+#: data/os/guix.gnu.org/guix-1.3.xml.in:6
+msgid "Guix 1.3"
+msgstr ""
+
+#: data/os/guix.gnu.org/guix-hurd-latest.xml.in:6
+msgid "Guix Hurd Latest"
+msgstr ""
+
+#: data/os/guix.gnu.org/guix-hurd-latest.xml.in:14
+msgid "GuixSD GNU Hurd QCOW2"
+msgstr ""
+
+#: data/os/guix.gnu.org/guix-latest.xml.in:6
+msgid "Guix latest"
 msgstr ""
 
 #: data/os/haiku-os.org/haiku-nightly.xml.in:4
@@ -2402,6 +2667,22 @@ msgstr ""
 msgid "Haiku R1/Beta3"
 msgstr ""
 
+#: data/os/hyperbola.info/hyperbola-03.xml.in:7
+msgid "Hyperbola"
+msgstr ""
+
+#: data/os/hyperbola.info/hyperbola-03.xml.in:9
+msgid "Hyperbola Project"
+msgstr ""
+
+#: data/os/hyperbola.info/hyperbola-03.xml.in:15
+msgid "Hypebola 03"
+msgstr ""
+
+#: data/os/hyperbola.info/hyperbola-03.xml.in:18
+msgid "Hypetalking 03"
+msgstr ""
+
 #: data/os/libosinfo.org/linux-2016.xml.in:7
 msgid "Generic Linux 2016"
 msgstr ""
@@ -2409,6 +2690,7 @@ msgstr ""
 #: data/os/libosinfo.org/linux-2016.xml.in:9
 #: data/os/libosinfo.org/linux-2018.xml.in:9
 #: data/os/libosinfo.org/linux-2020.xml.in:9
+#: data/os/libosinfo.org/linux-2022.xml.in:9
 #: data/os/libosinfo.org/unknown.xml.in:8
 msgid "Libosinfo"
 msgstr ""
@@ -2419,6 +2701,10 @@ msgstr ""
 
 #: data/os/libosinfo.org/linux-2020.xml.in:7
 msgid "Generic Linux 2020"
+msgstr ""
+
+#: data/os/libosinfo.org/linux-2022.xml.in:7
+msgid "Generic Linux 2022"
 msgstr ""
 
 #: data/os/libosinfo.org/unknown.xml.in:7
@@ -2627,31 +2913,15 @@ msgid "Manjaro"
 msgstr ""
 
 #: data/os/manjaro.org/manjaro-rolling.xml.in:29
-msgid "Manjaro Architect"
-msgstr ""
-
-#: data/os/manjaro.org/manjaro-rolling.xml.in:33
 msgid "Manjaro GNOME"
 msgstr ""
 
-#: data/os/manjaro.org/manjaro-rolling.xml.in:37
-msgid "Manjaro GNOME (Minimal)"
-msgstr ""
-
-#: data/os/manjaro.org/manjaro-rolling.xml.in:41
+#: data/os/manjaro.org/manjaro-rolling.xml.in:33
 msgid "Manjaro KDE"
 msgstr ""
 
-#: data/os/manjaro.org/manjaro-rolling.xml.in:45
-msgid "Manjaro KDE (Minimal)"
-msgstr ""
-
-#: data/os/manjaro.org/manjaro-rolling.xml.in:49
+#: data/os/manjaro.org/manjaro-rolling.xml.in:37
 msgid "Manjaro XFCE"
-msgstr ""
-
-#: data/os/manjaro.org/manjaro-rolling.xml.in:53
-msgid "Manjaro XFCE (Minimal)"
 msgstr ""
 
 #: data/os/microsoft.com/msdos-6.22.xml.in:6
@@ -2669,7 +2939,8 @@ msgstr ""
 #: data/os/microsoft.com/win-1.0.xml.in:7
 #: data/os/microsoft.com/win-10.d/post-installable-drivers.xml.in:7
 #: data/os/microsoft.com/win-10.d/pre-installable-drivers.xml.in:7
-#: data/os/microsoft.com/win-10.xml.in:8 data/os/microsoft.com/win-2.0.xml.in:7
+#: data/os/microsoft.com/win-10.xml.in:8 data/os/microsoft.com/win-11.xml.in:8
+#: data/os/microsoft.com/win-2.0.xml.in:7
 #: data/os/microsoft.com/win-2.1.xml.in:7 data/os/microsoft.com/win-2k.xml.in:8
 #: data/os/microsoft.com/win-2k12.xml.in:8
 #: data/os/microsoft.com/win-2k12r2.xml.in:8
@@ -2722,6 +2993,10 @@ msgstr ""
 
 #: data/os/microsoft.com/win-10.xml.in:27
 msgid "Microsoft Windows 10 Enterprise (Long Term Servicing Branch) Evaluation"
+msgstr ""
+
+#: data/os/microsoft.com/win-11.xml.in:6
+msgid "Microsoft Windows 11"
 msgstr ""
 
 #: data/os/microsoft.com/win-2.0.xml.in:6
@@ -2790,6 +3065,10 @@ msgstr ""
 
 #: data/os/microsoft.com/win-2k19.xml.in:6
 msgid "Microsoft Windows Server 2019"
+msgstr ""
+
+#: data/os/microsoft.com/win-2k19.xml.in:18
+msgid "Windows Server 2019 Essentials"
 msgstr ""
 
 #: data/os/microsoft.com/win-2k22.xml.in:6
@@ -2930,6 +3209,24 @@ msgstr ""
 
 #: data/os/microsoft.com/winnt-4.0.xml.in:6
 msgid "Microsoft Windows NT Server 4.0"
+msgstr ""
+
+#: data/os/miraclelinux.com/miraclelinux-8.4.xml.in:6
+msgid "MIRACLE LINUX 8.4"
+msgstr ""
+
+#: data/os/miraclelinux.com/miraclelinux-8.4.xml.in:8
+#: data/os/miraclelinux.com/miraclelinux-9-unknown.xml.in:8
+#: data/os/miraclelinux.com/miraclelinux-9.0.xml.in:8
+msgid "Cybertrust Japan Co., Ltd."
+msgstr ""
+
+#: data/os/miraclelinux.com/miraclelinux-9-unknown.xml.in:6
+msgid "MIRACLE LINUX 9 Unknown"
+msgstr ""
+
+#: data/os/miraclelinux.com/miraclelinux-9.0.xml.in:6
+msgid "MIRACLE LINUX 9.0"
 msgstr ""
 
 #: data/os/netbsd.org/netbsd-0.8.xml.in:6
@@ -3087,6 +3384,8 @@ msgstr ""
 #: data/os/nixos.org/nixos-20.03.xml.in:8
 #: data/os/nixos.org/nixos-20.09.xml.in:8
 #: data/os/nixos.org/nixos-21.05.xml.in:8
+#: data/os/nixos.org/nixos-21.11.xml.in:8
+#: data/os/nixos.org/nixos-22.05.xml.in:8
 #: data/os/nixos.org/nixos-unknown.xml.in:6
 #: data/os/nixos.org/nixos-unknown.xml.in:7
 #: data/os/nixos.org/nixos-unstable.xml.in:8
@@ -3111,6 +3410,8 @@ msgstr ""
 
 #: data/os/nixos.org/nixos-20.09.xml.in:33
 #: data/os/nixos.org/nixos-21.05.xml.in:33
+#: data/os/nixos.org/nixos-21.11.xml.in:33
+#: data/os/nixos.org/nixos-22.05.xml.in:33
 #: data/os/nixos.org/nixos-unstable.xml.in:30
 msgid "NixOS Unstable (GNOME installation CD)"
 msgstr ""
@@ -3129,6 +3430,30 @@ msgstr ""
 
 #: data/os/nixos.org/nixos-21.05.xml.in:36
 msgid "NixOS 21.05 (Plasma 5 installation CD)"
+msgstr ""
+
+#: data/os/nixos.org/nixos-21.11.xml.in:6
+msgid "NixOS 21.11"
+msgstr ""
+
+#: data/os/nixos.org/nixos-21.11.xml.in:30
+msgid "NixOS 21.11 (minimal installation CD)"
+msgstr ""
+
+#: data/os/nixos.org/nixos-21.11.xml.in:36
+msgid "NixOS 21.11 (Plasma 5 installation CD)"
+msgstr ""
+
+#: data/os/nixos.org/nixos-22.05.xml.in:6
+msgid "NixOS 22.05"
+msgstr ""
+
+#: data/os/nixos.org/nixos-22.05.xml.in:30
+msgid "NixOS 22.05 (minimal installation CD)"
+msgstr ""
+
+#: data/os/nixos.org/nixos-22.05.xml.in:36
+msgid "NixOS 22.05 (Plasma 5 installation CD)"
 msgstr ""
 
 #: data/os/nixos.org/nixos-unstable.xml.in:6
@@ -3191,6 +3516,7 @@ msgstr ""
 #: data/os/openbsd.org/openbsd-6.7.xml.in:10
 #: data/os/openbsd.org/openbsd-6.8.xml.in:10
 #: data/os/openbsd.org/openbsd-6.9.xml.in:10
+#: data/os/openbsd.org/openbsd-7.0.xml.in:10
 msgid "OpenBSD Project"
 msgstr ""
 
@@ -3319,6 +3645,11 @@ msgstr ""
 msgid "OpenBSD 6.9"
 msgstr ""
 
+#: data/os/openbsd.org/openbsd-7.0.xml.in:6
+#: data/os/openbsd.org/openbsd-7.0.xml.in:18
+msgid "OpenBSD 7.0"
+msgstr ""
+
 #: data/os/opensuse.org/opensuse-10.2.xml.in:6
 msgid "openSUSE 10.2"
 msgstr ""
@@ -3339,6 +3670,7 @@ msgstr ""
 #: data/os/opensuse.org/opensuse-15.1.xml.in:8
 #: data/os/opensuse.org/opensuse-15.2.xml.in:8
 #: data/os/opensuse.org/opensuse-15.3.xml.in:8
+#: data/os/opensuse.org/opensuse-15.4.xml.in:8
 #: data/os/opensuse.org/opensuse-42.1.xml.in:8
 #: data/os/opensuse.org/opensuse-42.2.xml.in:8
 #: data/os/opensuse.org/opensuse-42.3.xml.in:8
@@ -3414,6 +3746,11 @@ msgstr ""
 msgid "openSUSE Leap 15.3"
 msgstr ""
 
+#: data/os/opensuse.org/opensuse-15.4.xml.in:6
+#: data/os/opensuse.org/opensuse-15.4.xml.in:17
+msgid "openSUSE Leap 15.4"
+msgstr ""
+
 #: data/os/opensuse.org/opensuse-42.1.xml.in:6
 msgid "openSUSE Leap 42.1"
 msgstr ""
@@ -3459,8 +3796,10 @@ msgstr ""
 #: data/os/oracle.com/ol-7.3.xml.in:6 data/os/oracle.com/ol-7.4.xml.in:6
 #: data/os/oracle.com/ol-7.5.xml.in:6 data/os/oracle.com/ol-7.6.xml.in:6
 #: data/os/oracle.com/ol-7.7.xml.in:6 data/os/oracle.com/ol-7.8.xml.in:6
-#: data/os/oracle.com/ol-8.0.xml.in:6 data/os/oracle.com/ol-8.1.xml.in:6
-#: data/os/oracle.com/ol-8.2.xml.in:6
+#: data/os/oracle.com/ol-7.9.xml.in:6 data/os/oracle.com/ol-8.0.xml.in:6
+#: data/os/oracle.com/ol-8.1.xml.in:6 data/os/oracle.com/ol-8.2.xml.in:6
+#: data/os/oracle.com/ol-8.3.xml.in:6 data/os/oracle.com/ol-8.4.xml.in:6
+#: data/os/oracle.com/ol-8.5.xml.in:6
 msgid "Oracle America"
 msgstr ""
 
@@ -3612,6 +3951,10 @@ msgstr ""
 msgid "Oracle Linux 7.8"
 msgstr ""
 
+#: data/os/oracle.com/ol-7.9.xml.in:4
+msgid "Oracle Linux 7.9"
+msgstr ""
+
 #: data/os/oracle.com/ol-8.0.xml.in:4
 msgid "Oracle Linux 8.0"
 msgstr ""
@@ -3624,6 +3967,18 @@ msgstr ""
 msgid "Oracle Linux 8.2"
 msgstr ""
 
+#: data/os/oracle.com/ol-8.3.xml.in:4
+msgid "Oracle Linux 8.3"
+msgstr ""
+
+#: data/os/oracle.com/ol-8.4.xml.in:4
+msgid "Oracle Linux 8.4"
+msgstr ""
+
+#: data/os/oracle.com/ol-8.5.xml.in:4
+msgid "Oracle Linux 8.5"
+msgstr ""
+
 #: data/os/oracle.com/solaris-11.xml.in:6
 msgid "Oracle Solaris 11"
 msgstr ""
@@ -3632,12 +3987,22 @@ msgstr ""
 msgid "Oracle"
 msgstr ""
 
-#: data/os/pureos.net/pureos-8.xml.in:6
+#: data/os/pureos.net/pureos-10.xml.in:6 data/os/pureos.net/pureos-8.xml.in:6
+#: data/os/pureos.net/pureos-9.xml.in:6
 msgid "PureOS"
 msgstr ""
 
-#: data/os/pureos.net/pureos-8.xml.in:8
+#: data/os/pureos.net/pureos-10.xml.in:8 data/os/pureos.net/pureos-8.xml.in:8
+#: data/os/pureos.net/pureos-9.xml.in:8
 msgid "Purism, SPC"
+msgstr ""
+
+#: data/os/pureos.net/pureos-10.xml.in:28
+msgid "PureOS 10 GNOME"
+msgstr ""
+
+#: data/os/pureos.net/pureos-10.xml.in:31
+msgid "PureOS 10 KDE"
 msgstr ""
 
 #: data/os/redhat.com/rhel-2.1.1.xml.in:6
@@ -3684,8 +4049,9 @@ msgstr ""
 #: data/os/redhat.com/rhel-8.0.xml.in:8 data/os/redhat.com/rhel-8.1.xml.in:8
 #: data/os/redhat.com/rhel-8.2.xml.in:8 data/os/redhat.com/rhel-8.3.xml.in:8
 #: data/os/redhat.com/rhel-8.4.xml.in:8 data/os/redhat.com/rhel-8.5.xml.in:8
+#: data/os/redhat.com/rhel-8.6.xml.in:8 data/os/redhat.com/rhel-8.7.xml.in:8
 #: data/os/redhat.com/rhel-9-unknown.xml.in:8
-#: data/os/redhat.com/rhel-9.0.xml.in:8
+#: data/os/redhat.com/rhel-9.0.xml.in:8 data/os/redhat.com/rhel-9.1.xml.in:8
 #: data/os/redhat.com/rhel-atomic-7.0.xml.in:8
 #: data/os/redhat.com/rhel-atomic-7.1.xml.in:8
 #: data/os/redhat.com/rhel-atomic-7.2.xml.in:8
@@ -3993,12 +4359,24 @@ msgstr ""
 msgid "Red Hat Enterprise Linux 8.5"
 msgstr ""
 
+#: data/os/redhat.com/rhel-8.6.xml.in:6
+msgid "Red Hat Enterprise Linux 8.6"
+msgstr ""
+
+#: data/os/redhat.com/rhel-8.7.xml.in:6
+msgid "Red Hat Enterprise Linux 8.7"
+msgstr ""
+
 #: data/os/redhat.com/rhel-9-unknown.xml.in:6
 msgid "Red Hat Enterprise Linux 9 Unknown"
 msgstr ""
 
 #: data/os/redhat.com/rhel-9.0.xml.in:6
 msgid "Red Hat Enterprise Linux 9.0"
+msgstr ""
+
+#: data/os/redhat.com/rhel-9.1.xml.in:6
+msgid "Red Hat Enterprise Linux 9.1"
 msgstr ""
 
 #: data/os/redhat.com/rhel-atomic-7.0.xml.in:6
@@ -4112,8 +4490,11 @@ msgstr ""
 #: data/os/rockylinux.org/rocky-8-unknown.xml.in:8
 #: data/os/rockylinux.org/rocky-8.4.xml.in:8
 #: data/os/rockylinux.org/rocky-8.5.xml.in:8
+#: data/os/rockylinux.org/rocky-8.6.xml.in:8
+#: data/os/rockylinux.org/rocky-8.xml.in:8
 #: data/os/rockylinux.org/rocky-9-unknown.xml.in:8
 #: data/os/rockylinux.org/rocky-9.0.xml.in:8
+#: data/os/rockylinux.org/rocky-9.xml.in:8
 #: data/os/rockylinux.org/rocky-unknown.xml.in:8
 msgid "Rocky Enterprise Software Foundation"
 msgstr ""
@@ -4122,14 +4503,31 @@ msgstr ""
 msgid "Rocky Linux 8.4"
 msgstr ""
 
-#: data/os/rockylinux.org/rocky-8.4.xml.in:17
-#: data/os/rockylinux.org/rocky-8.4.xml.in:21
-#: data/os/rockylinux.org/rocky-8.4.xml.in:25
-msgid "Rocky 8.4"
-msgstr ""
-
 #: data/os/rockylinux.org/rocky-8.5.xml.in:6
 msgid "Rocky Linux 8.5"
+msgstr ""
+
+#: data/os/rockylinux.org/rocky-8.6.xml.in:6
+msgid "Rocky Linux 8.6"
+msgstr ""
+
+#: data/os/rockylinux.org/rocky-8.xml.in:6
+#: data/os/rockylinux.org/rocky-8.xml.in:18
+#: data/os/rockylinux.org/rocky-8.xml.in:22
+#: data/os/rockylinux.org/rocky-8.xml.in:26
+msgid "Rocky Linux 8"
+msgstr ""
+
+#: data/os/rockylinux.org/rocky-8.xml.in:32
+msgid "Rocky Linux Workstation 8"
+msgstr ""
+
+#: data/os/rockylinux.org/rocky-8.xml.in:35
+msgid "Rocky Linux Workstation-Lite 8"
+msgstr ""
+
+#: data/os/rockylinux.org/rocky-8.xml.in:38
+msgid "Rocky Linux XFCE 8"
 msgstr ""
 
 #: data/os/rockylinux.org/rocky-9-unknown.xml.in:6
@@ -4138,6 +4536,29 @@ msgstr ""
 
 #: data/os/rockylinux.org/rocky-9.0.xml.in:6
 msgid "Rocky Linux 9.0"
+msgstr ""
+
+#: data/os/rockylinux.org/rocky-9.xml.in:6
+#: data/os/rockylinux.org/rocky-9.xml.in:18
+#: data/os/rockylinux.org/rocky-9.xml.in:22
+#: data/os/rockylinux.org/rocky-9.xml.in:26
+msgid "Rocky Linux 9"
+msgstr ""
+
+#: data/os/rockylinux.org/rocky-9.xml.in:32
+msgid "Rocky Linux Workstation 9"
+msgstr ""
+
+#: data/os/rockylinux.org/rocky-9.xml.in:35
+msgid "Rocky Linux Workstation-Lite 9"
+msgstr ""
+
+#: data/os/rockylinux.org/rocky-9.xml.in:38
+msgid "Rocky Linux KDE 9"
+msgstr ""
+
+#: data/os/rockylinux.org/rocky-9.xml.in:41
+msgid "Rocky Linux XFCE 9"
 msgstr ""
 
 #: data/os/rockylinux.org/rocky-unknown.xml.in:6
@@ -4343,13 +4764,13 @@ msgstr ""
 #: data/os/suse.com/caasp-unknown.xml.in:9
 #: data/os/suse.com/sle-15-unknown.xml.in:8 data/os/suse.com/sle-15.1.xml.in:8
 #: data/os/suse.com/sle-15.2.xml.in:8 data/os/suse.com/sle-15.3.xml.in:8
-#: data/os/suse.com/sle-15.xml.in:8 data/os/suse.com/sle-unknown.xml.in:8
-#: data/os/suse.com/sled-10.1.xml.in:8 data/os/suse.com/sled-10.2.xml.in:8
-#: data/os/suse.com/sled-10.3.xml.in:8 data/os/suse.com/sled-10.4.xml.in:8
-#: data/os/suse.com/sled-10.xml.in:8 data/os/suse.com/sled-11.1.xml.in:8
-#: data/os/suse.com/sled-11.2.xml.in:8 data/os/suse.com/sled-11.3.xml.in:8
-#: data/os/suse.com/sled-11.4.xml.in:8 data/os/suse.com/sled-11.xml.in:8
-#: data/os/suse.com/sled-12-unknown.xml.in:8
+#: data/os/suse.com/sle-15.4.xml.in:8 data/os/suse.com/sle-15.xml.in:8
+#: data/os/suse.com/sle-unknown.xml.in:8 data/os/suse.com/sled-10.1.xml.in:8
+#: data/os/suse.com/sled-10.2.xml.in:8 data/os/suse.com/sled-10.3.xml.in:8
+#: data/os/suse.com/sled-10.4.xml.in:8 data/os/suse.com/sled-10.xml.in:8
+#: data/os/suse.com/sled-11.1.xml.in:8 data/os/suse.com/sled-11.2.xml.in:8
+#: data/os/suse.com/sled-11.3.xml.in:8 data/os/suse.com/sled-11.4.xml.in:8
+#: data/os/suse.com/sled-11.xml.in:8 data/os/suse.com/sled-12-unknown.xml.in:8
 #: data/os/suse.com/sled-12.1.xml.in:8 data/os/suse.com/sled-12.2.xml.in:8
 #: data/os/suse.com/sled-12.3.xml.in:8 data/os/suse.com/sled-12.4.xml.in:8
 #: data/os/suse.com/sled-12.5.xml.in:8 data/os/suse.com/sled-12.xml.in:8
@@ -4358,6 +4779,7 @@ msgstr ""
 #: data/os/suse.com/slem-5.0.xml.in:11 data/os/suse.com/slem-5.0.xml.in:12
 #: data/os/suse.com/slem-5.0.xml.in:13 data/os/suse.com/slem-5.0.xml.in:14
 #: data/os/suse.com/slem-5.0.xml.in:15 data/os/suse.com/slem-5.0.xml.in:16
+#: data/os/suse.com/slem-5.1.xml.in:8 data/os/suse.com/slem-5.2.xml.in:8
 #: data/os/suse.com/sles-10.1.xml.in:8 data/os/suse.com/sles-10.2.xml.in:8
 #: data/os/suse.com/sles-10.3.xml.in:8 data/os/suse.com/sles-10.4.xml.in:8
 #: data/os/suse.com/sles-10.xml.in:8 data/os/suse.com/sles-11.1.xml.in:8
@@ -4397,6 +4819,10 @@ msgstr ""
 
 #: data/os/suse.com/sle-15.3.xml.in:6
 msgid "SUSE Linux Enterprise 15 SP3"
+msgstr ""
+
+#: data/os/suse.com/sle-15.4.xml.in:6
+msgid "SUSE Linux Enterprise 15 SP4"
 msgstr ""
 
 #: data/os/suse.com/sle-15.xml.in:6
@@ -4481,6 +4907,14 @@ msgstr ""
 
 #: data/os/suse.com/slem-5.0.xml.in:6
 msgid "SUSE Linux Enterprise Micro"
+msgstr ""
+
+#: data/os/suse.com/slem-5.1.xml.in:6
+msgid "SUSE Linux Enterprise Micro 5.1"
+msgstr ""
+
+#: data/os/suse.com/slem-5.2.xml.in:6
+msgid "SUSE Linux Enterprise Micro 5.2"
 msgstr ""
 
 #: data/os/suse.com/sles-10.1.xml.in:6
@@ -4593,6 +5027,30 @@ msgstr ""
 msgid "Pop!_OS 20.10"
 msgstr ""
 
+#: data/os/trisquel.info/trisquel-9.xml.in:7
+msgid "Trisquel"
+msgstr ""
+
+#: data/os/trisquel.info/trisquel-9.xml.in:9
+msgid "The Trisquel Project"
+msgstr ""
+
+#: data/os/trisquel.info/trisquel-9.xml.in:16
+msgid "Trisquel 9"
+msgstr ""
+
+#: data/os/trisquel.info/trisquel-9.xml.in:19
+msgid "Triskel 9"
+msgstr ""
+
+#: data/os/trisquel.info/trisquel-9.xml.in:22
+msgid "Trisquel 9 Mini"
+msgstr ""
+
+#: data/os/trisquel.info/trisquel-9.xml.in:25
+msgid "Trisquel 9 Sugar Toast"
+msgstr ""
+
 #: data/os/ubuntu.com/ubuntu-10.04.xml.in:7
 msgid "Ubuntu 10.04 LTS"
 msgstr ""
@@ -4620,6 +5078,9 @@ msgstr ""
 #: data/os/ubuntu.com/ubuntu-20.04.xml.in:10
 #: data/os/ubuntu.com/ubuntu-20.10.xml.in:10
 #: data/os/ubuntu.com/ubuntu-21.04.xml.in:10
+#: data/os/ubuntu.com/ubuntu-21.10.xml.in:10
+#: data/os/ubuntu.com/ubuntu-22.04.xml.in:12
+#: data/os/ubuntu.com/ubuntu-22.10.xml.in:10
 #: data/os/ubuntu.com/ubuntu-4.10.xml.in:9
 #: data/os/ubuntu.com/ubuntu-5.04.xml.in:9
 #: data/os/ubuntu.com/ubuntu-5.10.xml.in:9
@@ -4722,6 +5183,18 @@ msgstr ""
 msgid "Ubuntu 21.04"
 msgstr ""
 
+#: data/os/ubuntu.com/ubuntu-21.10.xml.in:8
+msgid "Ubuntu 21.10"
+msgstr ""
+
+#: data/os/ubuntu.com/ubuntu-22.04.xml.in:10
+msgid "Ubuntu 22.04 LTS"
+msgstr ""
+
+#: data/os/ubuntu.com/ubuntu-22.10.xml.in:8
+msgid "Ubuntu 22.10"
+msgstr ""
+
 #: data/os/ubuntu.com/ubuntu-4.10.xml.in:7
 msgid "Ubuntu 4.10"
 msgstr ""
@@ -4764,6 +5237,63 @@ msgstr ""
 
 #: data/os/ubuntu.com/ubuntu-9.10.xml.in:7
 msgid "Ubuntu 9.10"
+msgstr ""
+
+#: data/os/univention.de/ucs-4.0.xml.in:7
+msgid "Univention Corporate Server 4.0"
+msgstr ""
+
+#: data/os/univention.de/ucs-4.0.xml.in:9
+#: data/os/univention.de/ucs-4.1.xml.in:8
+#: data/os/univention.de/ucs-4.2.xml.in:8
+#: data/os/univention.de/ucs-4.3.xml.in:8
+#: data/os/univention.de/ucs-4.4.xml.in:8
+#: data/os/univention.de/ucs-5.0.xml.in:8
+msgid "Univention GmbH"
+msgstr ""
+
+#: data/os/univention.de/ucs-4.0.xml.in:33
+msgid "UCS 4.0"
+msgstr ""
+
+#: data/os/univention.de/ucs-4.1.xml.in:6
+msgid "Univention Corporate Server 4.1"
+msgstr ""
+
+#: data/os/univention.de/ucs-4.1.xml.in:34
+msgid "UCS 4.1"
+msgstr ""
+
+#: data/os/univention.de/ucs-4.2.xml.in:6
+msgid "Univention Corporate Server 4.2"
+msgstr ""
+
+#: data/os/univention.de/ucs-4.2.xml.in:34
+msgid "UCS 4.2"
+msgstr ""
+
+#: data/os/univention.de/ucs-4.3.xml.in:6
+msgid "Univention Corporate Server 4.3"
+msgstr ""
+
+#: data/os/univention.de/ucs-4.3.xml.in:34
+msgid "UCS 4.3"
+msgstr ""
+
+#: data/os/univention.de/ucs-4.4.xml.in:6
+msgid "Univention Corporate Server 4.4"
+msgstr ""
+
+#: data/os/univention.de/ucs-4.4.xml.in:33
+msgid "UCS 4.4"
+msgstr ""
+
+#: data/os/univention.de/ucs-5.0.xml.in:6
+msgid "Univention Corporate Server 5.0"
+msgstr ""
+
+#: data/os/univention.de/ucs-5.0.xml.in:33
+msgid "UCS 5.0"
 msgstr ""
 
 #: data/os/voidlinux.org/voidlinux-rolling.xml.in:6
