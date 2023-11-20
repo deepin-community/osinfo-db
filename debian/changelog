@@ -1,3 +1,56 @@
+osinfo-db (0.20221130-2) unstable; urgency=medium
+
+  * Fix test_ids to work outside the source repository
+  * testsuite autopkgtest: run test_ids again
+
+ -- Pino Toscano <pino@debian.org>  Sat, 03 Dec 2022 08:17:18 +0100
+
+osinfo-db (0.20221130-1) unstable; urgency=medium
+
+  * New upstream version 0.20221130
+  * testsuite autopkgtest: temporarily ignore test_ids for now
+
+ -- Pino Toscano <pino@debian.org>  Wed, 30 Nov 2022 21:43:11 +0100
+
+osinfo-db (0.20221018-1) unstable; urgency=medium
+
+  * New upstream version 0.20221018
+
+ -- Pino Toscano <pino@debian.org>  Wed, 19 Oct 2022 07:46:31 +0200
+
+osinfo-db (0.20220830-1) unstable; urgency=medium
+
+  * New upstream version 0.20220830
+  * Run autopkgtest with pytest instead of nose (Closes: #1018431)
+  * test_jessie autopkgtest: switch from unittest to pytest
+
+ -- Pino Toscano <pino@debian.org>  Wed, 31 Aug 2022 06:57:41 +0200
+
+osinfo-db (0.20220727-1) unstable; urgency=medium
+
+  * New upstream version 0.20220727
+
+ -- Pino Toscano <pino@debian.org>  Thu, 28 Jul 2022 07:36:31 +0200
+
+osinfo-db (0.20220516-1) unstable; urgency=medium
+
+  * New upstream version 0.20220516
+  * Bump Standards-Version to 4.6.1, no changes required
+
+ -- Pino Toscano <pino@debian.org>  Tue, 17 May 2022 07:25:12 +0200
+
+osinfo-db (0.20220214-1) unstable; urgency=medium
+
+  * New upstream version 0.20220214
+
+ -- Pino Toscano <pino@debian.org>  Mon, 14 Feb 2022 23:08:41 +0100
+
+osinfo-db (0.20211216-1) unstable; urgency=medium
+
+  * New upstream version 0.20211216
+
+ -- Pino Toscano <pino@debian.org>  Sat, 18 Dec 2021 10:30:37 +0100
+
 osinfo-db (0.20211013-1) unstable; urgency=medium
 
   * New upstream version 0.20211013

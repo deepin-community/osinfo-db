@@ -9,8 +9,8 @@
     <family>linux</family>
     <distro>nixos</distro>
 
-    <upgrades id="http://nixos.org/nixos/21.05"/>
-    <derives-from id="http://nixos.org/nixos/21.05"/>
+    <upgrades id="http://nixos.org/nixos/22.05"/>
+    <derives-from id="http://nixos.org/nixos/22.05"/>
 
     <resources arch="all">
       <minimum>
@@ -37,7 +37,7 @@
       <variant id="minimal"/>
       <url>https://channels.nixos.org/nixos-unstable/latest-nixos-minimal-i686-linux.iso</url>
       <iso>
-        <volume-id>nixos-minimal-21.11-i686</volume-id>
+        <volume-id>nixos-minimal-22.11-i686</volume-id>
       </iso>
       <kernel>boot/bzImage</kernel>
       <initrd>boot/initrd</initrd>
@@ -47,7 +47,7 @@
       <variant id="minimal"/>
       <url>https://channels.nixos.org/nixos-unstable/latest-nixos-minimal-x86_64-linux.iso</url>
       <iso>
-        <volume-id>nixos-minimal-21.11-x86_64</volume-id>
+        <volume-id>nixos-minimal-22.11-x86_64</volume-id>
       </iso>
       <kernel>boot/bzImage</kernel>
       <initrd>boot/initrd</initrd>
@@ -57,7 +57,7 @@
       <variant id="gnome"/>
       <url>https://channels.nixos.org/nixos-unstable/latest-nixos-gnome-x86_64-linux.iso</url>
       <iso>
-        <volume-id>nixos-gnome-21.11-x86_64</volume-id>
+        <volume-id>nixos-gnome-22.11-x86_64</volume-id>
       </iso>
       <kernel>boot/bzImage</kernel>
       <initrd>boot/initrd</initrd>
@@ -67,7 +67,7 @@
       <variant id="plasma5"/>
       <url>https://channels.nixos.org/nixos-unstable/latest-nixos-plasma5-x86_64-linux.iso</url>
       <iso>
-        <volume-id>nixos-plasma5-21.11-x86_64</volume-id>
+        <volume-id>nixos-plasma5-22.11-x86_64</volume-id>
       </iso>
       <kernel>boot/bzImage</kernel>
       <initrd>boot/initrd</initrd>

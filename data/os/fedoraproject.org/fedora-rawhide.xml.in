@@ -8,8 +8,8 @@
     <vendor>Fedora Project</vendor>
     <family>linux</family>
     <distro>fedora</distro>
-    <upgrades id="http://fedoraproject.org/fedora/34"/>
-    <derives-from id="http://fedoraproject.org/fedora/34"/>
+    <upgrades id="http://fedoraproject.org/fedora/37"/>
+    <derives-from id="http://fedoraproject.org/fedora/37"/>
     <release-status>prerelease</release-status>
 
     <variant id="workstation">
@@ -26,8 +26,8 @@
       <iso>
         <volume-id>Fedora-.*-dvd-x86_64-rawh</volume-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
     </media>
 
     <media arch="x86_64" live="true">
@@ -58,13 +58,13 @@
       </treeinfo>
     </tree>
 
-    <tree arch="armv7l">
+    <tree arch="s390x">
+      <url>https://download.fedoraproject.org/pub/fedora-secondary/development/rawhide/Server/s390x/os</url>
       <variant id="server"/>
-      <url>https://download.fedoraproject.org/pub/fedora/linux/development/rawhide/Server/armhfp/os</url>
       <treeinfo>
         <family>Fedora</family>
         <version>Rawhide</version>
-        <arch>armhfp</arch>
+        <arch>s390x</arch>
         <variant>Server</variant>
       </treeinfo>
     </tree>
@@ -91,13 +91,13 @@
       </treeinfo>
     </tree>
 
-    <tree arch="armv7l">
+    <tree arch="s390x">
+      <url>https://download.fedoraproject.org/pub/fedora-secondary/development/rawhide/Everything/s390x/os</url>
       <variant id="everything-netinst"/>
-      <url>https://download.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/armhfp/os</url>
       <treeinfo>
         <family>Fedora</family>
         <version>Rawhide</version>
-        <arch>armhfp</arch>
+        <arch>s390x</arch>
         <variant>Everything</variant>
       </treeinfo>
     </tree>

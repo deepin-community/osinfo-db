@@ -4,7 +4,7 @@
     <short-id>almalinux8</short-id>
     <name>AlmaLinux 8</name>
     <version>8</version>
-    <vendor>AlmaLinux</vendor>
+    <vendor>AlmaLinux OS Foundation</vendor>
     <family>linux</family>
     <distro>almalinux</distro>
     <clones id="http://redhat.com/rhel/8.4"/>
@@ -23,32 +23,84 @@
         <system-id>LINUX</system-id>
         <volume-id>AlmaLinux-8.*-aarch64.*</volume-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
+    </media>
+
+    <media arch="ppc64le">
+      <iso>
+        <volume-id>AlmaLinux-8.*-ppc64le.*</volume-id>
+      </iso>
+      <kernel>ppc/ppc64/vmlinuz</kernel>
+      <initrd>ppc/ppc64/initrd.img</initrd>
+    </media>
+
+    <media arch="s390x">
+      <iso>
+        <volume-id>AlmaLinux-8.*-s390x.*</volume-id>
+      </iso>
+      <kernel>images/kernel.img</kernel>
+      <initrd>images/initrd.img</initrd>
     </media>
 
     <tree arch="x86_64">
-      <url>http://repo.almalinux.org/almalinux/8/BaseOS/x86_64/os/</url>
+      <url>https://repo.almalinux.org/almalinux/8/BaseOS/x86_64/os/</url>
       <treeinfo>
         <family>AlmaLinux</family>
         <version>^8$</version>
         <arch>x86_64</arch>
       </treeinfo>
     </tree>
+
     <tree arch="aarch64">
-      <url>http://repo.almalinux.org/almalinux/8/BaseOS/aarch64/os/</url>
+      <url>https://repo.almalinux.org/almalinux/8/BaseOS/aarch64/os/</url>
       <treeinfo>
         <family>AlmaLinux</family>
         <version>^8$</version>
         <arch>aarch64</arch>
       </treeinfo>
     </tree>
+
+    <tree arch="ppc64le">
+      <url>https://repo.almalinux.org/almalinux/8/BaseOS/ppc64le/os/</url>
+      <treeinfo>
+        <family>AlmaLinux</family>
+        <version>^8$</version>
+        <arch>ppc64le</arch>
+      </treeinfo>
+    </tree>
+
+    <tree arch="s390x">
+      <url>https://repo.almalinux.org/almalinux/8/BaseOS/s390x/os/</url>
+      <treeinfo>
+        <family>AlmaLinux</family>
+        <version>^8$</version>
+        <arch>s390x</arch>
+      </treeinfo>
+    </tree>
+
     <tree arch="all">
       <treeinfo>
         <family>AlmaLinux</family>
         <version>^8$</version>
       </treeinfo>
     </tree>
+
+    <image arch="x86_64" format="qcow2" cloud-init="true">
+      <url>https://repo.almalinux.org/almalinux/8/cloud/x86_64/images/AlmaLinux-8-GenericCloud-latest.x86_64.qcow2</url>
+    </image>
+
+    <image arch="aarch64" format="qcow2" cloud-init="true">
+      <url>https://repo.almalinux.org/almalinux/8/cloud/aarch64/images/AlmaLinux-8-GenericCloud-latest.aarch64.qcow2</url>
+    </image>
+
+    <image arch="ppc64le" format="qcow2" cloud-init="true">
+      <url>https://repo.almalinux.org/almalinux/8/cloud/ppc64le/images/AlmaLinux-8-GenericCloud-latest.ppc64le.qcow2</url>
+    </image>
+
+    <image arch="s390x" format="qcow2" cloud-init="true">
+      <url>https://repo.almalinux.org/almalinux/8/cloud/s390x/images/AlmaLinux-8-GenericCloud-latest.s390x.qcow2</url>
+    </image>
 
     <resources arch="all">
       <minimum>
@@ -66,6 +118,8 @@
         <ram>3221225472</ram>
       </network-install>
     </resources>
+
+    <cloud-image-username>almalinux</cloud-image-username>
 
     <installer>
       <script id="http://redhat.com/rhel/kickstart/jeos"/>
