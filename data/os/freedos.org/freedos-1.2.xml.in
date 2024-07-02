@@ -6,10 +6,11 @@
     <name>FreeDOS 1.2</name>
     <version>1.2</version>
     <vendor>FreeDOS</vendor>
-    <family>linux</family>
+    <family>dos</family>
     <distro>freedos</distro>
 
     <release-date>2016-12-25</release-date>
+    <eol-date>2022-02-20</eol-date>
 
     <variant id="standard">
       <name>FreeDOS 1.2 "Standard" Installer</name>
@@ -18,7 +19,7 @@
       <name>FreeDOS 1.2 "Legacy" Installer</name>
     </variant>
 
-    <media arch="x86_64">
+    <media arch="i686">
       <variant id="standard"/>
       <url>https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.2/official/FD12CD.iso</url>
       <iso>
@@ -27,7 +28,7 @@
       </iso>
     </media>
 
-    <media arch="x86_64">
+    <media arch="i686">
       <variant id="legacy"/>
       <url>https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.2/official/FD12LGCY.iso</url>
       <iso>

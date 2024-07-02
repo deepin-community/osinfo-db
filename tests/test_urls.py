@@ -7,88 +7,89 @@ import logging
 
 import pytest
 import requests
+import urllib3
 
 from . import util
 
 
-class UrlType(enum.Enum):
-    URL_GENERIC = 1
-    URL_ISO = 2
-    URL_INITRD = 3
-    URL_DISK_RAW = 4
-    URL_DISK_QCOW2 = 5
-    URL_DISK_VMDK = 6
-    URL_TREEINFO = 7
-    URL_DISK_CONTAINERDISK = 8
+class UniqueSet(set):
+    """
+    Special set that is never equal to any other set.
+
+    This particular subclass of set is useful only as value in enum,
+    to ensure that enum items that have the same items are still considered
+    different; this is because enum.Enum turns duplicate values as aliases
+    for the first item.
+
+    Yes, it's an evil hack.
+    """
+
+    def __eq__(self, _):
+        return False
 
 
-iso_content_types = {
-    # proper ISO mimetype
-    "application/x-cd-image",
-    "application/x-iso9660-image",
-    # generic data
-    "application/octet-stream",
-    "binary/octet-stream",
-    # ISO files on archive.netbsd.org
-    "text/plain",
-    # a few openSUSE Live images
-    "application/x-up-download",
+class UrlType(UniqueSet, enum.Enum):
+    URL_ISO = {
+        # proper ISO mimetype
+        "application/x-cd-image",
+        "application/x-iso9660-image",
+        "application/x-iso",
+        # generic data
+        "application/octet-stream",
+        "binary/octet-stream",
+        # ISO files on archive.netbsd.org
+        "text/plain",
+        # a few openSUSE Live images
+        "application/x-up-download",
+    }
+    URL_INITRD = {
+        # generic data
+        "application/octet-stream",
+        # gzip-compressed
+        "application/x-gzip",
+    }
+    URL_DISK_RAW = {}
+    URL_DISK_QCOW2 = {
+        # generic data
+        "application/octet-stream",
+        # qcow2 files on some mirrors
+        "application-x-qemu-disk",
+        # qcow2 files on fedoraproject.org mirrors; similar issue of
+        # https://pagure.io/fedora-infrastructure/issue/10766
+        "application/x-troff-man",
+        # qcow2 files on some opensuse.org mirrors
+        "text/plain",
+    }
+    URL_DISK_VMDK = {}
+    URL_TREEINFO = {
+        # generic data
+        "application/octet-stream",
+        # on some Fedora mirrors
+        "text/plain",
+    }
+    URL_DISK_CONTAINERDISK = {
+        # image manifest
+        "application/vnd.docker.distribution.manifest.v1+json",
+    }
+    URL_KERNEL = {
+        # generic data
+        "application/octet-stream",
+    }
+    URL_TREE = {
+        # HTML page of file listing
+        "text/html",
+        "application/xhtml+xml",
+    }
+    URL_DISK_VHDX = {}
+
+
+image_formats_types = {
+    "containerdisk": UrlType.URL_DISK_CONTAINERDISK,
+    "qcow2": UrlType.URL_DISK_QCOW2,
+    "raw": UrlType.URL_DISK_RAW,
+    "vhdx": UrlType.URL_DISK_VHDX,
+    "vmdk": UrlType.URL_DISK_VMDK,
 }
-
-
-initrd_content_types = {
-    # generic data
-    "application/octet-stream",
-    # gzip-compressed
-    "application/x-gzip",
-}
-
-
-raw_content_types = {}
-
-
-qcow2_content_types = {
-    # generic data
-    "application/octet-stream",
-    # qcow2 files on fedoraproject.org mirrors; similar issue of
-    # https://pagure.io/fedora-infrastructure/issue/10766
-    "application/x-troff-man",
-    # qcow2 files on some opensuse.org mirrors
-    "text/plain",
-}
-
-
-vmdk_content_types = {}
-
-
-treeinfo_content_types = {
-    # generic data
-    "application/octet-stream",
-}
-
-
-containerdisk_content_types = {
-    # image manifest
-    "application/vnd.docker.distribution.manifest.v1+json",
-}
-
-
-def _is_content_type_allowed(content_type, url_type):
-    if url_type == UrlType.URL_ISO:
-        return content_type in iso_content_types
-    if url_type == UrlType.URL_INITRD:
-        return content_type in initrd_content_types
-    if url_type == UrlType.URL_DISK_RAW:
-        return content_type in raw_content_types
-    if url_type == UrlType.URL_DISK_QCOW2:
-        return content_type in qcow2_content_types
-    if url_type == UrlType.URL_DISK_VMDK:
-        return content_type in vmdk_content_types
-    if url_type == UrlType.URL_TREEINFO:
-        return content_type in treeinfo_content_types
-    if url_type == UrlType.URL_DISK_CONTAINERDISK:
-        return content_type in containerdisk_content_types
-    return True
 
 
 def _transform_docker_url(url):
@@ -105,28 +106,38 @@ def _transform_docker_url(url):
     return url
 
 
-def _check_url(url, url_type):
-    logging.info("url: %s, type: %s", url, url_type)
+def _check_url(session: requests.Session, url, url_type, real_url=None):
+    logging.info("url: %s, type: %s", real_url if real_url else url, url_type)
     headers = {"user-agent": "Wget/1.0"}
-    if url_type == UrlType.URL_DISK_CONTAINERDISK:
-        url = _transform_docker_url(url)
-    response = requests.head(url, allow_redirects=True, headers=headers, timeout=30)
+    try:
+        response = session.head(url, allow_redirects=True, headers=headers, timeout=30)
+    except requests.RequestException as e:
+        # do not use logging.exception() here, as there is no need to log
+        # the full traceback from requests
+        logging.error("head: %s", e)
+        return False
     content_type = response.headers.get("content-type")
     if content_type:
         try:
             content_type = content_type[0 : content_type.index(";")]
         except ValueError:
             pass
-    logging.info(
-        "response: %s; code: %d; content-type: %s",
+
+    msg = "response: %s; code: %d; content-type: %s; url: %s" % (
         http.client.responses[response.status_code],
         response.status_code,
         content_type,
+        response.url,
     )
+
     if not response.ok:
+        logging.error(msg)
         return False
-    if content_type and not _is_content_type_allowed(content_type, url_type):
+    if content_type and content_type not in url_type.value:
+        logging.error(msg)
         return False
+
+    logging.info(msg)
     return True
 
 
@@ -138,53 +149,73 @@ def _collect_os_urls():
 
     for osxml in util.DataFiles.oses():
         urls = []
-        for i in osxml.images:
-            if not i.url:
-                continue
-            url_type = UrlType.URL_GENERIC
-            if i.format == "raw":
-                url_type = UrlType.URL_DISK_RAW
-            elif i.format == "qcow2":
-                url_type = UrlType.URL_DISK_QCOW2
-            elif i.format == "vmdk":
-                url_type = UrlType.URL_DISK_VMDK
-            elif i.format == "containerdisk":
-                url_type = UrlType.URL_DISK_CONTAINERDISK
-            urls.append((i.url, url_type))
+        urls.extend(
+            [(i.url, image_formats_types[i.format]) for i in osxml.images if i.url]
+        )
         urls.extend([(m.url, UrlType.URL_ISO) for m in osxml.medias if m.url])
         for t in osxml.trees:
             if not t.url:
                 continue
-            urls.append((t.url, UrlType.URL_GENERIC))
+            urls.append((t.url, UrlType.URL_TREE))
             url = t.url
             if not url.endswith("/"):
                 url += "/"
             if t.kernel:
-                urls.append((url + t.kernel, UrlType.URL_GENERIC))
+                urls.append((url + t.kernel, UrlType.URL_KERNEL))
             if t.initrd:
                 urls.append((url + t.initrd, UrlType.URL_INITRD))
             if t.treeinfo:
                 urls.append((url + ".treeinfo", UrlType.URL_TREEINFO))
         if urls:
-            ret.append((osxml.shortid, urls))
+            urls_http = []
+            urls_docker = []
+            urls_other = []
+            for url_pair in urls:
+                u = url_pair[0]
+                if u.startswith("http://") or u.startswith("https://"):
+                    urls_http.append(url_pair)
+                elif u.startswith("docker://"):
+                    urls_docker.append(url_pair)
+                else:
+                    urls_other.append(url_pair)
+            assert len(urls_http) + len(urls_docker) + len(urls_other) == len(urls)
+            ret.append(
+                pytest.param(urls_http, urls_docker, urls_other, id=osxml.shortid)
+            )
 
     return ret
 
 
-@pytest.mark.parametrize(
-    "testdata", _collect_os_urls(), ids=lambda testdata: testdata[0]
-)
-def test_urls(testdata):
-    urls = testdata[1]
+@pytest.fixture(scope="module")
+def session():
+    session = requests.Session()
+    # As some distro URLs are flaky or rate limit requests (429) use Retry to
+    # help navigate those at the expense of taking longer.
+    # Use an high value for pool_connections: this represents the number of
+    # urllib HTTP connection pools instantiated, each for a different host:
+    # this way, we can reuse more connections across OSes.
+    retries = urllib3.util.Retry(backoff_factor=1, status_forcelist=(429,), total=6)
+    adapter = requests.adapters.HTTPAdapter(max_retries=retries, pool_connections=100)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+    return session
+
+
+@pytest.mark.parametrize("urls_http,urls_docker,urls_other", _collect_os_urls())
+def test_urls(urls_http, urls_docker, urls_other, session):
     broken = []
-    for (url, url_type) in urls:
-        # As some distro URLs are flaky, let's give it a try 3 times
-        # before actually failing.
-        for i in range(3):
-            ok = _check_url(url, url_type)
-            if ok:
-                break
+    for url, url_type in urls_http:
+        ok = _check_url(session, url, url_type)
 
         if not ok:
             broken.append(url)
+    for url, url_type in urls_docker:
+        http_url = _transform_docker_url(url)
+        ok = _check_url(session, http_url, url_type, real_url=url)
+
+        if not ok:
+            broken.append(url)
+    for url, _ in urls_other:
+        logging.warning("unhandled URL: %s", url)
+        broken.append(url)
     assert broken == []

@@ -27,6 +27,10 @@
       <name>Fedora 34 Everything</name>
     </variant>
 
+    <devices>
+      <device id="http://pcisig.com/pci/1af4/1058"/> <!-- virtio1.0-mem -->
+    </devices>
+
     <!-- Workstation -->
 
     <!-- Live -->
@@ -79,8 +83,8 @@
         <volume-id>Fedora-S-dvd-aarch64-34</volume-id>
         <system-id>LINUX</system-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
       <installer>
         <script id='http://fedoraproject.org/fedora/kickstart/jeos'/>
       </installer>
@@ -93,8 +97,8 @@
       <iso>
         <volume-id>Fedora-S-dvd-aarch64-34</volume-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
     </media>
 
     <!-- DVD -->
@@ -105,8 +109,8 @@
         <volume-id>Fedora-S-dvd-armhfp-34</volume-id>
         <system-id>LINUX</system-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
     </media>
 
     <!-- Network Installer !-->
@@ -116,8 +120,8 @@
       <iso>
         <volume-id>Fedora-S-dvd-armhfp-34</volume-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
       <installer>
         <script id='http://fedoraproject.org/fedora/kickstart/jeos'/>
       </installer>
@@ -144,8 +148,8 @@
       <iso>
         <volume-id>Fedora-E-dvd-aarch64-34</volume-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
     </media>
 
     <media arch="armv7l" installer-script="false">
@@ -154,8 +158,8 @@
       <iso>
         <volume-id>Fedora-E-dvd-armhfp-34</volume-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
     </media>
 
     <tree arch="x86_64">

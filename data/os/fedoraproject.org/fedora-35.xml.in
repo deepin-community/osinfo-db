@@ -12,6 +12,7 @@
     <derives-from id="http://fedoraproject.org/fedora/34"/>
 
     <release-date>2021-11-02</release-date>
+    <eol-date>2022-12-13</eol-date>
 
     <variant id="workstation">
       <name>Fedora 35 Workstation</name>
@@ -31,7 +32,7 @@
     <!-- Live -->
     <media arch="x86_64" live="true" installer-script="false">
       <variant id="workstation"/>
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-WS-Live-35.*</volume-id>
       </iso>
@@ -44,7 +45,7 @@
     <!-- DVD -->
     <media arch="x86_64">
       <variant id="server"/>
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Server/x86_64/iso/Fedora-Server-dvd-x86_64-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Server/x86_64/iso/Fedora-Server-dvd-x86_64-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-S-dvd-x86_64-35</volume-id>
         <system-id>LINUX</system-id>
@@ -59,7 +60,7 @@
     <!-- Network Installer !-->
     <media arch="x86_64">
       <variant id="server-netinst"/>
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Server/x86_64/iso/Fedora-Server-netinst-x86_64-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Server/x86_64/iso/Fedora-Server-netinst-x86_64-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-S-dvd-x86_64-35</volume-id>
       </iso>
@@ -73,13 +74,13 @@
     <!-- DVD -->
     <media arch="aarch64" installer-script="false">
       <variant id="server"/>
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Server/aarch64/iso/Fedora-Server-dvd-aarch64-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Server/aarch64/iso/Fedora-Server-dvd-aarch64-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-S-dvd-aarch64-35</volume-id>
         <system-id>LINUX</system-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
       <installer>
         <script id='http://fedoraproject.org/fedora/kickstart/jeos'/>
       </installer>
@@ -88,35 +89,35 @@
     <!-- Network Installer !-->
     <media arch="aarch64" installer-script="false">
       <variant id="server-netinst"/>
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Server/aarch64/iso/Fedora-Server-netinst-aarch64-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Server/aarch64/iso/Fedora-Server-netinst-aarch64-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-S-dvd-aarch64-35</volume-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
     </media>
 
     <!-- DVD -->
     <media arch="armv7l" installer-script="false">
       <variant id="server"/>
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Server/armhfp/iso/Fedora-Server-dvd-armhfp-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Server/armhfp/iso/Fedora-Server-dvd-armhfp-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-S-dvd-armhfp-35</volume-id>
         <system-id>LINUX</system-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
     </media>
 
     <!-- Network Installer !-->
     <media arch="armv7l" installer-script="false">
       <variant id="server-netinst"/>
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Server/armhfp/iso/Fedora-Server-netinst-armhfp-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Server/armhfp/iso/Fedora-Server-netinst-armhfp-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-S-dvd-armhfp-35</volume-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
       <installer>
         <script id='http://fedoraproject.org/fedora/kickstart/jeos'/>
       </installer>
@@ -125,7 +126,7 @@
     <!-- DVD -->
     <media arch="s390x" installer-script="false">
       <variant id="server"/>
-      <url>https://download.fedoraproject.org/pub/fedora-secondary/releases/35/Server/s390x/iso/Fedora-Server-dvd-s390x-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora-secondary/releases/35/Server/s390x/iso/Fedora-Server-dvd-s390x-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-S-dvd-s390x-35</volume-id>
         <system-id>LINUX</system-id>
@@ -137,7 +138,7 @@
     <!-- Network Installer !-->
     <media arch="s390x" installer-script="false">
       <variant id="server-netinst"/>
-      <url>https://download.fedoraproject.org/pub/fedora-secondary/releases/35/Server/s390x/iso/Fedora-Server-netinst-s390x-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora-secondary/releases/35/Server/s390x/iso/Fedora-Server-netinst-s390x-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-S-dvd-s390x-35</volume-id>
       </iso>
@@ -151,7 +152,7 @@
     <!-- Everything -->
     <media arch="x86_64">
       <variant id="everything-netinst"/>
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-E-dvd-x86_64-35</volume-id>
       </iso>
@@ -165,27 +166,27 @@
 
     <media arch="aarch64" installer-script="false">
       <variant id="everything-netinst"/>
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Everything/aarch64/iso/Fedora-Everything-netinst-aarch64-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Everything/aarch64/iso/Fedora-Everything-netinst-aarch64-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-E-dvd-aarch64-35</volume-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
     </media>
 
     <media arch="armv7l" installer-script="false">
       <variant id="everything-netinst"/>
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Everything/armhfp/iso/Fedora-Everything-netinst-armhfp-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Everything/armhfp/iso/Fedora-Everything-netinst-armhfp-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-E-dvd-armhfp-35</volume-id>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
     </media>
 
     <media arch="s390x" installer-script="false">
       <variant id="everything-netinst"/>
-      <url>https://download.fedoraproject.org/pub/fedora-secondary/releases/35/Everything/s390x/iso/Fedora-Everything-netinst-s390x-35-1.2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora-secondary/releases/35/Everything/s390x/iso/Fedora-Everything-netinst-s390x-35-1.2.iso</url>
       <iso>
         <volume-id>Fedora-E-dvd-s390x-35</volume-id>
       </iso>
@@ -194,7 +195,7 @@
     </media>
 
     <tree arch="x86_64">
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Server/x86_64/os</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Server/x86_64/os</url>
       <variant id="server"/>
       <treeinfo>
         <family>Fedora</family>
@@ -205,7 +206,7 @@
     </tree>
 
     <tree arch="aarch64">
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Server/aarch64/os/</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Server/aarch64/os/</url>
       <variant id="server"/>
       <treeinfo>
         <family>Fedora</family>
@@ -216,7 +217,7 @@
     </tree>
 
     <tree arch="armv7l">
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Server/armhfp/os/</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Server/armhfp/os/</url>
       <variant id="server"/>
       <treeinfo>
         <family>Fedora</family>
@@ -227,7 +228,7 @@
     </tree>
 
     <tree arch="s390x">
-      <url>https://download.fedoraproject.org/pub/fedora-secondary/releases/35/Server/s390x/os</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora-secondary/releases/35/Server/s390x/os</url>
       <variant id="server"/>
       <treeinfo>
         <family>Fedora</family>
@@ -238,7 +239,7 @@
     </tree>
 
     <tree arch="x86_64">
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Everything/x86_64/os</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Everything/x86_64/os</url>
       <variant id="everything-netinst"/>
       <treeinfo>
         <family>Fedora</family>
@@ -249,7 +250,7 @@
     </tree>
 
     <tree arch="aarch64">
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Everything/aarch64/os/</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Everything/aarch64/os/</url>
       <variant id="everything-netinst"/>
       <treeinfo>
         <family>Fedora</family>
@@ -260,7 +261,7 @@
     </tree>
 
     <tree arch="armv7l">
-      <url>https://download.fedoraproject.org/pub/fedora/linux/releases/35/Everything/armhfp/os/</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/35/Everything/armhfp/os/</url>
       <variant id="everything-netinst"/>
       <treeinfo>
         <family>Fedora</family>
@@ -271,7 +272,7 @@
     </tree>
 
     <tree arch="s390x">
-      <url>https://download.fedoraproject.org/pub/fedora-secondary/releases/35/Everything/s390x/os</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora-secondary/releases/35/Everything/s390x/os</url>
       <variant id="everything-netinst"/>
       <treeinfo>
         <family>Fedora</family>
@@ -282,15 +283,15 @@
     </tree>
 
     <image arch="x86_64" format="qcow2" cloud-init="true">
-      <url>https://dl.fedoraproject.org/pub/fedora/linux/releases/35/Cloud/x86_64/images/Fedora-Cloud-Base-35-1.2.x86_64.qcow2</url>
+      <url>https://dl.fedoraproject.org/pub/archive/fedora/linux/releases/35/Cloud/x86_64/images/Fedora-Cloud-Base-35-1.2.x86_64.qcow2</url>
     </image>
 
     <image arch="aarch64" format="qcow2" cloud-init="true">
-      <url>https://dl.fedoraproject.org/pub/fedora/linux/releases/35/Cloud/aarch64/images/Fedora-Cloud-Base-35-1.2.aarch64.qcow2</url>
+      <url>https://dl.fedoraproject.org/pub/archive/fedora/linux/releases/35/Cloud/aarch64/images/Fedora-Cloud-Base-35-1.2.aarch64.qcow2</url>
     </image>
 
     <image arch="s390x" format="qcow2" cloud-init="true">
-      <url>https://download.fedoraproject.org/pub/fedora-secondary/releases/35/Cloud/s390x/images/Fedora-Cloud-Base-35-1.2.s390x.qcow2</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora-secondary/releases/35/Cloud/s390x/images/Fedora-Cloud-Base-35-1.2.s390x.qcow2</url>
     </image>
 
     <image arch="x86_64" format="containerdisk" cloud-init="true">

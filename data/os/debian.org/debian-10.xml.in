@@ -14,17 +14,18 @@
     <derives-from id="http://debian.org/debian/9"/>
 
     <release-date>2019-07-06</release-date>
+    <eol-date>2024-06-30</eol-date>
 
     <resources arch="all">
       <minimum>
         <cpu>1000000000</cpu>
         <n-cpus>1</n-cpus>
-        <ram>1073741824</ram>
+        <ram>536870912</ram>
         <storage>10737418240</storage>
       </minimum>
       <recommended>
         <cpu>1000000000</cpu>
-        <ram>1073741824</ram>
+        <ram>2147483648</ram>
         <storage>21474836480</storage>
       </recommended>
     </resources>
@@ -83,8 +84,8 @@
       <iso>
         <volume-id>Debian 10.\d+.\d+ armhf n</volume-id>
       </iso>
-      <kernel>install.armhf/vmlinuz</kernel>
-      <initrd>install.armhf/initrd.gz</initrd>
+      <kernel>install.ahf/vmlinuz</kernel>
+      <initrd>install.ahf/initrd.gz</initrd>
     </media>
     <media arch="ppc64le">
       <variant id="universal-netinst"/>
@@ -139,8 +140,8 @@
       <iso>
         <volume-id>Debian 10.\d+.\d+ armhf \d+</volume-id>
       </iso>
-      <kernel>install.armhf/vmlinuz</kernel>
-      <initrd>install.armhf/initrd.gz</initrd>
+      <kernel>install.ahf/vmlinuz</kernel>
+      <initrd>install.ahf/initrd.gz</initrd>
     </media>
     <media arch="ppc64le">
       <variant id="universal"/>
@@ -181,16 +182,6 @@
       <kernel>current/images/netboot/vmlinuz</kernel>
       <initrd>current/images/netboot/initrd.gz</initrd>
     </tree>
-    <tree arch="s390x">
-      <url>http://deb.debian.org/debian/dists/buster/main/installer-s390x</url>
-      <kernel>current/images/generic/kernel.debian</kernel>
-      <initrd>current/images/generic/initrd.debian</initrd>
-    </tree>
-    <tree arch="ppc64le">
-      <url>http://deb.debian.org/debian/dists/buster/main/installer-ppc64el</url>
-      <kernel>current/images/netboot/debian-installer/ppc64el/vmlinux</kernel>
-      <initrd>current/images/netboot/debian-installer/ppc64el/initrd.gz</initrd>
-    </tree>
 
     <image arch="x86_64" format="qcow2" cloud-init="true">
       <variant id="openstack"/>
@@ -225,11 +216,6 @@
     <image arch="aarch64" format="qcow2" cloud-init="true">
       <variant id="generic"/>
       <url>https://cdimage.debian.org/cdimage/cloud/buster/latest/debian-10-generic-arm64.qcow2</url>
-    </image>
-
-    <image arch="ppc64le" format="qcow2" cloud-init="true">
-      <variant id="generic"/>
-      <url>https://cdimage.debian.org/cdimage/cloud/buster/latest/debian-10-generic-ppc64el.qcow2</url>
     </image>
 
     <image arch="x86_64" format="qcow2">

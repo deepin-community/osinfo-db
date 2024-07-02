@@ -9,8 +9,8 @@
     <family>linux</family>
     <distro>nixos</distro>
 
-    <upgrades id="http://nixos.org/nixos/22.05"/>
-    <derives-from id="http://nixos.org/nixos/22.05"/>
+    <upgrades id="http://nixos.org/nixos/24.05"/>
+    <derives-from id="http://nixos.org/nixos/24.05"/>
 
     <resources arch="all">
       <minimum>
@@ -29,25 +29,15 @@
     <variant id="gnome">
       <name>NixOS Unstable (GNOME installation CD)</name>
     </variant>
-    <variant id="plasma5">
-      <name>NixOS Unstable (Plasma 5 installation CD)</name>
+    <variant id="plasma6">
+      <name>NixOS Unstable (Plasma 6 installation CD)</name>
     </variant>
-
-    <media arch="i686" live="true">
-      <variant id="minimal"/>
-      <url>https://channels.nixos.org/nixos-unstable/latest-nixos-minimal-i686-linux.iso</url>
-      <iso>
-        <volume-id>nixos-minimal-22.11-i686</volume-id>
-      </iso>
-      <kernel>boot/bzImage</kernel>
-      <initrd>boot/initrd</initrd>
-    </media>
 
     <media arch="x86_64" live="true">
       <variant id="minimal"/>
       <url>https://channels.nixos.org/nixos-unstable/latest-nixos-minimal-x86_64-linux.iso</url>
       <iso>
-        <volume-id>nixos-minimal-22.11-x86_64</volume-id>
+        <volume-id>nixos-minimal-24.11-x86_64</volume-id>
       </iso>
       <kernel>boot/bzImage</kernel>
       <initrd>boot/initrd</initrd>
@@ -57,19 +47,49 @@
       <variant id="gnome"/>
       <url>https://channels.nixos.org/nixos-unstable/latest-nixos-gnome-x86_64-linux.iso</url>
       <iso>
-        <volume-id>nixos-gnome-22.11-x86_64</volume-id>
+        <volume-id>nixos-gnome-24.11-x86_64</volume-id>
       </iso>
       <kernel>boot/bzImage</kernel>
       <initrd>boot/initrd</initrd>
     </media>
 
     <media arch="x86_64" live="true">
-      <variant id="plasma5"/>
-      <url>https://channels.nixos.org/nixos-unstable/latest-nixos-plasma5-x86_64-linux.iso</url>
+      <variant id="plasma6"/>
+      <url>https://channels.nixos.org/nixos-unstable/latest-nixos-plasma6-x86_64-linux.iso</url>
       <iso>
-        <volume-id>nixos-plasma5-22.11-x86_64</volume-id>
+        <volume-id>nixos-plasma6-24.11-x86_64</volume-id>
       </iso>
       <kernel>boot/bzImage</kernel>
+      <initrd>boot/initrd</initrd>
+    </media>
+
+    <media arch="aarch64" live="true">
+      <variant id="minimal"/>
+      <url>https://channels.nixos.org/nixos-unstable/latest-nixos-minimal-aarch64-linux.iso</url>
+      <iso>
+        <volume-id>nixos-minimal-24.11-aarch64</volume-id>
+      </iso>
+      <kernel>boot/Image</kernel>
+      <initrd>boot/initrd</initrd>
+    </media>
+
+    <media arch="aarch64" live="true">
+      <variant id="gnome"/>
+      <url>https://channels.nixos.org/nixos-unstable/latest-nixos-gnome-aarch64-linux.iso</url>
+      <iso>
+        <volume-id>nixos-gnome-24.11-aarch64</volume-id>
+      </iso>
+      <kernel>boot/Image</kernel>
+      <initrd>boot/initrd</initrd>
+    </media>
+
+    <media arch="aarch64" live="true">
+      <variant id="plasma6"/>
+      <url>https://channels.nixos.org/nixos-unstable/latest-nixos-plasma6-aarch64-linux.iso</url>
+      <iso>
+        <volume-id>nixos-plasma6-24.11-aarch64</volume-id>
+      </iso>
+      <kernel>boot/Image</kernel>
       <initrd>boot/initrd</initrd>
     </media>
   </os>

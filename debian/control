@@ -1,8 +1,9 @@
 Source: osinfo-db
 Section: libs
 Priority: optional
-Maintainer: Guido Günther <agx@sigxcpu.org>
-Uploaders: Pino Toscano <pino@debian.org>,
+Maintainer: Debian Libvirt Maintainers <pkg-libvirt-maintainers@lists.alioth.debian.org>
+Uploaders: Guido Günther <agx@sigxcpu.org>,
+ Pino Toscano <pino@debian.org>,
 Build-Depends:
  debhelper-compat (= 13),
  gettext,
@@ -10,7 +11,7 @@ Build-Depends:
  osinfo-db-tools,
  python3-lxml <!nocheck>,
  python3-pytest <!nocheck>,
-Standards-Version: 4.6.1
+Standards-Version: 4.7.0
 Homepage: https://libosinfo.org/
 Vcs-Git: https://salsa.debian.org/libvirt-team/osinfo-db.git
 Vcs-Browser: https://salsa.debian.org/libvirt-team/osinfo-db

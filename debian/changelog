@@ -1,3 +1,60 @@
+osinfo-db (0.20240701-1) unstable; urgency=medium
+
+  * New upstream version 0.20240701
+
+ -- Pino Toscano <pino@debian.org>  Mon, 01 Jul 2024 20:16:57 +0200
+
+osinfo-db (0.20240523-1) unstable; urgency=medium
+
+  * New upstream version 0.20240523
+
+ -- Pino Toscano <pino@debian.org>  Thu, 23 May 2024 18:38:59 +0200
+
+osinfo-db (0.20240510-1) unstable; urgency=medium
+
+  * New upstream version 0.20240510
+  * Bump Standards-Version to 4.7.0, no changes required
+
+ -- Pino Toscano <pino@debian.org>  Sat, 11 May 2024 08:13:59 +0200
+
+osinfo-db (0.20231215-1) unstable; urgency=medium
+
+  * New upstream version 0.20231215
+
+ -- Pino Toscano <pino@debian.org>  Fri, 15 Dec 2023 18:52:40 +0100
+
+osinfo-db (0.20231027-1) unstable; urgency=medium
+
+  * New upstream version 0.20231027
+  * Update maintainership:
+    - set Maintainer to Debian Libvirt Maintainers, like other libvirt packages
+    - move Guido to Uploaders
+
+ -- Pino Toscano <pino@debian.org>  Sat, 28 Oct 2023 21:18:10 +0200
+
+osinfo-db (0.20230719-1) unstable; urgency=medium
+
+  * New upstream version 0.20230719
+
+ -- Pino Toscano <pino@debian.org>  Thu, 20 Jul 2023 08:39:11 +0200
+
+osinfo-db (0.20230518-1) unstable; urgency=medium
+
+  * New upstream version 0.20230518
+  * Drop the patch, backported from upstream
+
+ -- Pino Toscano <pino@debian.org>  Fri, 19 May 2023 08:34:18 +0200
+
+osinfo-db (0.20230308-1) unstable; urgency=medium
+
+  * New upstream version 0.20230308
+  * Drop the patch, backported from upstream
+  * Update standards version to 4.6.2, no changes needed.
+  * test-installscript autopkgtest: test also Debian 12
+  * Fix <short-id> of Debian Bookworm to be "debian12"
+
+ -- Pino Toscano <pino@debian.org>  Thu, 09 Mar 2023 10:52:01 +0100
+
 osinfo-db (0.20221130-2) unstable; urgency=medium
 
   * Fix test_ids to work outside the source repository

@@ -33,6 +33,7 @@
       <device id="http://qemu.org/chipset/x86/q35"/> <!-- qemu-x86-q35 -->
       <device id="http://pcisig.com/pci/8086/10d3"/> <!-- e1000e -->
       <device id="http://pcisig.com/pci/8086/293e"/> <!-- ich9-hda -->
+      <device id="http://pcisig.com/pci/1af4/1058"/> <!-- virtio1.0-mem -->
     </devices>
 
     <firmware arch="x86_64" type="efi"/>
@@ -166,19 +167,19 @@
     </image>
 
     <image arch="aarch64" format="qcow2" cloud-init="true">
-      <url>https://cloud.centos.org/centos/9-stream/aarch64/images/CentOS-Stream-GenericCloud-9-20220919.0.aarch64.qcow2</url>
+      <url>https://cloud.centos.org/centos/9-stream/aarch64/images/CentOS-Stream-GenericCloud-9-latest.aarch64.qcow2</url>
     </image>
 
     <image arch="ppc64le" format="qcow2" cloud-init="true">
-      <url>https://cloud.centos.org/centos/9-stream/ppc64le/images/CentOS-Stream-GenericCloud-9-20220919.0.ppc64le.qcow2</url>
+      <url>https://cloud.centos.org/centos/9-stream/ppc64le/images/CentOS-Stream-GenericCloud-9-latest.ppc64le.qcow2</url>
     </image>
 
     <image arch="s390x" format="qcow2" cloud-init="true">
-      <url>https://cloud.centos.org/centos/9-stream/s390x/images/CentOS-Stream-GenericCloud-9-20220919.0.s390x.qcow2</url>
+      <url>https://cloud.centos.org/centos/9-stream/s390x/images/CentOS-Stream-GenericCloud-9-latest.s390x.qcow2</url>
     </image>
 
     <image arch="x86_64" format="qcow2" cloud-init="true">
-      <url>https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-GenericCloud-9-20220919.0.x86_64.qcow2</url>
+      <url>https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-GenericCloud-9-latest.x86_64.qcow2</url>
     </image>
 
     <resources arch="all">

@@ -6,13 +6,13 @@
     <name>SUSE CaaS Platform 3.0</name>
     <version>3.0</version>
     <vendor>SUSE</vendor>
-    <vendor xml:lang="fr">SUSE</vendor>
     <family>linux</family>
     <distro>caasp</distro>
     <upgrades id="http://suse.com/caasp/2.0"/>
     <derives-from id="http://suse.com/caasp/2.0"/>
 
     <release-date>2018-06-28</release-date>
+    <eol-date>2020-03-31</eol-date>
 
     <media arch="x86_64">
       <iso>

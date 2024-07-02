@@ -14,7 +14,8 @@
     <upgrades id="http://ubuntu.com/ubuntu/22.04"/>
     <derives-from id="http://ubuntu.com/ubuntu/22.04"/>
 
-    <release-status>prerelease</release-status>
+    <release-date>2022-10-20</release-date>
+    <eol-date>2023-07-20</eol-date>
 
     <resources arch="all">
       <minimum>
@@ -41,8 +42,8 @@
             - https://discourse.ubuntu.com/t/please-review-design-for-automated-server-installs
     -->
 
-    <media arch="x86_64" live="true" installer-script="false">
-      <url>https://releases.ubuntu.com/22.10/ubuntu-22.10-desktop-amd64.iso</url>
+    <media arch="x86_64" live="true" installer-script="true">
+      <url>https://old-releases.ubuntu.com/releases/22.10/ubuntu-22.10-desktop-amd64.iso</url>
       <iso>
         <volume-id>Ubuntu 22.10(.\d\+?)?(.\d\+?)? amd64</volume-id>
       </iso>
@@ -53,7 +54,7 @@
       </installer>
     </media>
     <media arch="x86_64" live="true" installer-script="false">
-      <url>https://releases.ubuntu.com/22.10/ubuntu-22.10-live-server-amd64.iso</url>
+      <url>https://old-releases.ubuntu.com/releases/22.10/ubuntu-22.10-live-server-amd64.iso</url>
       <iso>
         <volume-id>Ubuntu-Server 22.10(.\d\+?)?(.\d\+?)? amd64</volume-id>
       </iso>
@@ -61,7 +62,7 @@
       <initrd>casper/initrd</initrd>
     </media>
     <media arch="aarch64" live="true" installer-script="false">
-      <url>https://cdimage.ubuntu.com/ubuntu/releases/22.10/release/ubuntu-22.10-live-server-arm64.iso</url>
+      <url>https://old-releases.ubuntu.com/releases/22.10/ubuntu-22.10-live-server-arm64.iso</url>
       <iso>
         <volume-id>Ubuntu-Server 22.10(.\d\+?)?(.\d\+?)? arm64</volume-id>
       </iso>
@@ -69,44 +70,44 @@
       <initrd>casper/initrd</initrd>
     </media>
     <media arch="ppc64le" live="true" installer-script="false">
-      <url>https://cdimage.ubuntu.com/ubuntu/releases/22.10/release/ubuntu-22.10-live-server-ppc64el.iso</url>
+      <url>https://old-releases.ubuntu.com/releases/22.10/ubuntu-22.10-live-server-ppc64el.iso</url>
       <iso>
         <volume-id>Ubuntu-Server 22.10(.\d\+?)?(.\d\+?)? ppc64</volume-id>
       </iso>
-      <kernel>casper/vmlinuz</kernel>
+      <kernel>casper/vmlinux</kernel>
       <initrd>casper/initrd</initrd>
     </media>
     <media arch="s390x" live="true" installer-script="false">
-      <url>https://cdimage.ubuntu.com/ubuntu/releases/22.10/release/ubuntu-22.10-live-server-s390x.iso</url>
+      <url>https://old-releases.ubuntu.com/releases/22.10/ubuntu-22.10-live-server-s390x.iso</url>
       <iso>
         <volume-id>Ubuntu-Server 22.10(.\d\+?)?(.\d\+?)? s390x</volume-id>
       </iso>
-      <kernel>casper/vmlinuz</kernel>
-      <initrd>casper/initrd</initrd>
+      <kernel>boot/kernel.ubuntu</kernel>
+      <initrd>boot/initrd.ubuntu</initrd>
     </media>
 
     <image arch="x86_64" format="qcow2" cloud-init="true">
-      <url>https://cloud-images.ubuntu.com/kinetic/current/kinetic-server-cloudimg-amd64.img</url>
+      <url>https://cloud-images.ubuntu.com/releases/kinetic/release/ubuntu-22.10-server-cloudimg-amd64.img</url>
     </image>
 
     <image arch="x86_64" format="vmdk" cloud-init="true">
-      <url>https://cloud-images.ubuntu.com/kinetic/current/kinetic-server-cloudimg-amd64.vmdk</url>
+      <url>https://cloud-images.ubuntu.com/releases/kinetic/release/ubuntu-22.10-server-cloudimg-amd64.vmdk</url>
     </image>
 
     <image arch="aarch64" format="qcow2" cloud-init="true">
-      <url>https://cloud-images.ubuntu.com/kinetic/current/kinetic-server-cloudimg-arm64.img</url>
+      <url>https://cloud-images.ubuntu.com/releases/kinetic/release/ubuntu-22.10-server-cloudimg-arm64.img</url>
     </image>
 
     <image arch="armv7l" format="qcow2" cloud-init="true">
-      <url>https://cloud-images.ubuntu.com/kinetic/current/kinetic-server-cloudimg-armhf.img</url>
+      <url>https://cloud-images.ubuntu.com/releases/kinetic/release/ubuntu-22.10-server-cloudimg-armhf.img</url>
     </image>
 
     <image arch="ppc64le" format="qcow2" cloud-init="true">
-      <url>https://cloud-images.ubuntu.com/kinetic/current/kinetic-server-cloudimg-ppc64el.img</url>
+      <url>https://cloud-images.ubuntu.com/releases/kinetic/release/ubuntu-22.10-server-cloudimg-ppc64el.img</url>
     </image>
 
     <image arch="s390x" format="qcow2" cloud-init="true">
-      <url>https://cloud-images.ubuntu.com/kinetic/current/kinetic-server-cloudimg-s390x.img</url>
+      <url>https://cloud-images.ubuntu.com/releases/kinetic/release/ubuntu-22.10-server-cloudimg-s390x.img</url>
     </image>
 
     <installer>

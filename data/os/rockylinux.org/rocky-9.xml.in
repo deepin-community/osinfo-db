@@ -40,13 +40,16 @@
     <variant id="xfce">
       <name>Rocky Linux XFCE 9</name>
     </variant>
+    <variant id="cinnamon">
+      <name>Rocky Linux Cinnamon 9</name>
+    </variant>
     <!-- End Live Image Variants -->
 
     <!-- Latest Images -->
     <!-- x86_64 -->
     <media arch="x86_64">
       <variant id="netinst"/>
-      <url>https://dl.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-x86_64-boot.iso</url>
+      <url>https://dl.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9-latest-x86_64-boot.iso</url>
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-x86_64-dvd$</volume-id>
       </iso>
@@ -56,7 +59,7 @@
 
     <media arch="x86_64">
       <variant id="minimal"/>
-      <url>https://dl.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-x86_64-minimal.iso</url>
+      <url>https://dl.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9-latest-x86_64-minimal.iso</url>
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-x86_64-dvd$</volume-id>
       </iso>
@@ -66,7 +69,7 @@
 
     <media arch="x86_64">
       <variant id="everything"/>
-      <url>https://dl.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-x86_64-dvd.iso</url>
+      <url>https://dl.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9-latest-x86_64-dvd.iso</url>
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-x86_64-dvd$</volume-id>
       </iso>
@@ -78,39 +81,39 @@
     <!-- aarch64 -->
     <media arch="aarch64">
       <variant id="netinst"/>
-      <url>https://dl.rockylinux.org/pub/rocky/9/isos/aarch64/Rocky-aarch64-boot.iso</url>
+      <url>https://dl.rockylinux.org/pub/rocky/9/isos/aarch64/Rocky-9-latest-aarch64-boot.iso</url>
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-aarch64-dvd$</volume-id>
       </iso>
-      <kernel>isolinux/pxeboot/vmlinuz</kernel>
-      <initrd>isolinux/pxeboot/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
     </media>
 
     <media arch="aarch64">
       <variant id="minimal"/>
-      <url>https://dl.rockylinux.org/pub/rocky/9/isos/aarch64/Rocky-aarch64-minimal.iso</url>
+      <url>https://dl.rockylinux.org/pub/rocky/9/isos/aarch64/Rocky-9-latest-aarch64-minimal.iso</url>
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-aarch64-dvd$</volume-id>
       </iso>
-      <kernel>isolinux/pxeboot/vmlinuz</kernel>
-      <initrd>isolinux/pxeboot/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
     </media>
 
     <media arch="aarch64">
       <variant id="everything"/>
-      <url>https://dl.rockylinux.org/pub/rocky/9/isos/aarch64/Rocky-aarch64-dvd.iso</url>
+      <url>https://dl.rockylinux.org/pub/rocky/9/isos/aarch64/Rocky-9-latest-aarch64-dvd.iso</url>
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-aarch64-dvd$</volume-id>
       </iso>
-      <kernel>isolinux/pxeboot/vmlinuz</kernel>
-      <initrd>isolinux/pxeboot/initrd.img</initrd>
+      <kernel>images/pxeboot/vmlinuz</kernel>
+      <initrd>images/pxeboot/initrd.img</initrd>
     </media>
     <!-- aarch64 -->
 
     <!-- ppc64le -->
     <media arch="ppc64le">
       <variant id="netinst"/>
-      <url>https://dl.rockylinux.org/pub/rocky/9/isos/ppc64le/Rocky-ppc64le-boot.iso</url>
+      <url>https://dl.rockylinux.org/pub/rocky/9/isos/ppc64le/Rocky-9-latest-ppc64le-boot.iso</url>
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-ppc64le-dvd$</volume-id>
       </iso>
@@ -120,7 +123,7 @@
 
     <media arch="ppc64le">
       <variant id="minimal"/>
-      <url>https://dl.rockylinux.org/pub/rocky/9/isos/ppc64le/Rocky-ppc64le-minimal.iso</url>
+      <url>https://dl.rockylinux.org/pub/rocky/9/isos/ppc64le/Rocky-9-latest-ppc64le-minimal.iso</url>
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-ppc64le-dvd$</volume-id>
       </iso>
@@ -130,7 +133,7 @@
 
     <media arch="ppc64le">
       <variant id="everything"/>
-      <url>https://dl.rockylinux.org/pub/rocky/9/isos/ppc64le/Rocky-ppc64le-dvd.iso</url>
+      <url>https://dl.rockylinux.org/pub/rocky/9/isos/ppc64le/Rocky-9-latest-ppc64le-dvd.iso</url>
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-ppc64le-dvd$</volume-id>
       </iso>
@@ -142,26 +145,32 @@
     <!-- s390x -->
     <media arch="s390x">
       <variant id="netinst"/>
-      <url>https://dl.rockylinux.org/pub/rocky/9/isos/s390x/Rocky-s390x-boot.iso</url>
+      <url>https://dl.rockylinux.org/pub/rocky/9/isos/s390x/Rocky-9-latest-s390x-boot.iso</url>
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-s390x-dvd$</volume-id>
       </iso>
+      <kernel>images/kernel.img</kernel>
+      <initrd>images/initrd.img</initrd>
     </media>
 
     <media arch="s390x">
       <variant id="minimal"/>
-      <url>https://dl.rockylinux.org/pub/rocky/9/isos/s390x/Rocky-s390x-minimal.iso</url>
+      <url>https://dl.rockylinux.org/pub/rocky/9/isos/s390x/Rocky-9-latest-s390x-minimal.iso</url>
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-s390x-dvd$</volume-id>
       </iso>
+      <kernel>images/kernel.img</kernel>
+      <initrd>images/initrd.img</initrd>
     </media>
 
     <media arch="s390x">
       <variant id="everything"/>
-      <url>https://dl.rockylinux.org/pub/rocky/9/isos/s390x/Rocky-s390x-dvd.iso</url>
+      <url>https://dl.rockylinux.org/pub/rocky/9/isos/s390x/Rocky-9-latest-s390x-dvd.iso</url>
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-s390x-dvd$</volume-id>
       </iso>
+      <kernel>images/kernel.img</kernel>
+      <initrd>images/initrd.img</initrd>
     </media>
     <!-- s390x -->
     <!-- End Latest Images -->
@@ -195,6 +204,8 @@
       <iso>
         <volume-id>Rocky-9-([0-9]|[1-9][0-9])-s390x-.+$</volume-id>
       </iso>
+      <kernel>images/kernel.img</kernel>
+      <initrd>images/initrd.img</initrd>
     </media>
     <!-- End final catch -->
 
@@ -234,6 +245,16 @@
       <url>https://dl.rockylinux.org/pub/rocky/9/live/x86_64/Rocky-9-XFCE-x86_64-latest.iso</url>
       <iso>
         <volume-id>^Rocky-(XFCE-9[-]?([0-9]$|[1-9][0-9])?|9-([0-9]|[1-9][0-9])?-(Live-)?(XFCE)?$)</volume-id>
+      </iso>
+      <kernel>isolinux/vmlinuz</kernel>
+      <initrd>isolinux/initrd.img</initrd>
+    </media>
+
+    <media arch="x86_64" live="true" installer-script="false">
+      <variant id="cinnamon"/>
+      <url>https://dl.rockylinux.org/pub/rocky/9/live/x86_64/Rocky-9-Cinnamon-x86_64-latest.iso</url>
+      <iso>
+        <volume-id>^Rocky-(Cinnamon-9[-]?([0-9]$|[1-9][0-9])?|9-([0-9]|[1-9][0-9])?-(Live-)?(Cinnamon)?$)</volume-id>
       </iso>
       <kernel>isolinux/vmlinuz</kernel>
       <initrd>isolinux/initrd.img</initrd>
@@ -285,6 +306,14 @@
 
     <image arch="aarch64" format="qcow2" cloud-init="true">
       <url>https://download.rockylinux.org/pub/rocky/9/images/aarch64/Rocky-9-GenericCloud.latest.aarch64.qcow2</url>
+    </image>
+
+    <image arch="ppc64le" format="qcow2" cloud-init="true">
+      <url>https://download.rockylinux.org/pub/rocky/9/images/ppc64le/Rocky-9-GenericCloud.latest.ppc64le.qcow2</url>
+    </image>
+
+    <image arch="s390x" format="qcow2" cloud-init="true">
+      <url>https://download.rockylinux.org/pub/rocky/9/images/s390x/Rocky-9-GenericCloud.latest.s390x.qcow2</url>
     </image>
 
     <cloud-image-username>rocky</cloud-image-username>

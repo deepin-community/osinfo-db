@@ -2,12 +2,12 @@
 """
 Refreshes data from the index of downloadable images published by Endless.
 
-Each eos3.X branch gets a separate entry in the database; when a new release is made in
+Each OS branch gets a separate entry in the database; when a new release is made in
 that series, the URLs are refreshed to mark the newest point release. When a new branch
 is released, it is annotated as updating and deriving from the previous branch, and the
 old branch is marked as end-of-life as of the first release on the new branch.
 """
-# Copyright © 2019 Endless Mobile, Inc.
+# Copyright © 2019–2023 Endless OS Foundation LLC
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -23,17 +23,18 @@ old branch is marked as end-of-life as of the first release on the new branch.
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 import argparse
 import datetime
-from distutils.version import LooseVersion
 import json
 import jinja2
 import os
+import packaging.version
 import requests
+import shutil
 import subprocess
 import tempfile
 
 import gi
 
-gi.require_version("GnomeDesktop", "3.0")
+gi.require_version("GnomeDesktop", "4.0")
 from gi.repository import GnomeDesktop  # noqa: E402
 
 BASE_URL = "https://images-dl.endlessm.com"
@@ -85,7 +86,7 @@ def personality_name(personality):
 
 
 def publisher_id(branch):
-    if LooseVersion(branch) >= LooseVersion("3.9"):
+    if packaging.version.Version(branch) >= packaging.version.Version("3.9"):
         return "ENDLESS OS FOUNDATION LLC"
     else:
         return "ENDLESS COMPUTERS"
@@ -109,6 +110,8 @@ def predecessor(series):
         return "3.9"
     if series == "5.0":
         return "4.0"
+    if series == "6.0":
+        return "5.1"
     return adj(series, -1)
 
 
@@ -119,6 +122,8 @@ def successor(series):
         return "4.0"
     if series == "4.0":
         return "5.0"
+    if series == "5.1":
+        return "6.0"
 
     return adj(series, 1)
 
@@ -156,13 +161,15 @@ def fetch_isodata(branch, iso):
 
         f.flush()
 
-        os.makedirs(os.path.dirname(isodata_file), exist_ok=True)
-        with open(isodata_file, "w") as g:
+        isodata_dir = os.path.dirname(isodata_file)
+        os.makedirs(isodata_dir, exist_ok=True)
+        with tempfile.NamedTemporaryFile(dir=isodata_dir) as g:
             subprocess.run(
                 ("isoinfo", "-d", "-i", f.name),
                 stdout=g,
                 check=True,
             )
+            shutil.copyfile(g.name, isodata_file)
 
 
 def fetch_all_isodata(image):
@@ -175,7 +182,8 @@ def main():
     parser.add_argument(
         "--releases-json",
         type=argparse.FileType("r"),
-        help="path to releases-eos-3.json file (default: fetch from network)",
+        metavar="PATH",
+        help=f"path to releases-eos-3.json file (default: fetch from {MANIFEST_URL})",
     )
     args = parser.parse_args()
 
@@ -187,7 +195,7 @@ def main():
         manifest = response.json()
 
     images = list(manifest["images"].values())
-    images.sort(key=lambda i: LooseVersion(i["version"]))
+    images.sort(key=lambda i: packaging.version.Version(i["version"]))
     images_by_branch = {}
     for image in images:
         images_by_branch.setdefault(image["branch"], []).append(image)
@@ -197,6 +205,7 @@ def main():
         loader=jinja2.FileSystemLoader(DATA_DIR),
         autoescape=True,
         undefined=jinja2.StrictUndefined,
+        keep_trailing_newline=True,
     )
     env.filters["personality_name"] = personality_name
     env.filters["publisher_id"] = publisher_id
@@ -223,8 +232,13 @@ def main():
         except KeyError:
             eol_date = None
         else:
-            # Date of first release in next series
-            eol_date = guess_release_date(next_series_images[0])
+            if current_series == "4.0":
+                # Endless OS 4 was an LTS release, supported in parallel with
+                # Endless OS 5.x for a time; it was discontinued on this date.
+                eol_date = datetime.date(2024, 2, 29)
+            else:
+                # Date of first release in next series
+                eol_date = guess_release_date(next_series_images[0])
 
         retired_personalities = (
             all_personalities_for_branch(images_by_branch[branch])
