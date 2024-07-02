@@ -1,6 +1,7 @@
 # This work is licensed under the GNU GPLv2 or later.
 # See the COPYING file in the top-level directory.
 
+import copy
 import re
 
 import lxml.etree as ET
@@ -42,6 +43,21 @@ class _XMLBase:
         if text is not None:
             return int(text)
         return default
+
+    def _get_bool(self, element_name, default=None):
+        text = self._get_text(element_name)
+        if text is not None:
+            return text == "true"
+        return default
+
+    def _get_attr_bool(self, attr_name, default=None):
+        value = self._root.attrib.get(attr_name, None)
+        if value:
+            return value == "true"
+        return default
+
+    def get_cloned_element(self):
+        return copy.deepcopy(self._root)
 
 
 class Os(_XMLBase):
@@ -190,6 +206,10 @@ class Os(_XMLBase):
             for s in i.findall("script")
         ]
 
+    @_cache_property
+    def version(self):
+        return self._get_text("version")
+
 
 class Resources(_XMLBase):
     @_cache_property
@@ -225,11 +245,8 @@ class Image(_XMLBase):
         return self._get_text("url")
 
     @_cache_property
-    def variant(self):
-        variant = self._root.find("variant")
-        if variant is not None:
-            return variant.attrib["id"]
-        return None
+    def variants(self):
+        return [v.attrib["id"] for v in self._root.findall("variant")]
 
     @_cache_property
     def format(self):
@@ -249,11 +266,8 @@ class Media(_XMLBase):
         return None
 
     @_cache_property
-    def variant(self):
-        variant = self._root.find("variant")
-        if variant is not None:
-            return variant.attrib["id"]
-        return None
+    def variants(self):
+        return [v.attrib["id"] for v in self._root.findall("variant")]
 
     @_cache_property
     def installscripts(self):
@@ -263,6 +277,14 @@ class Media(_XMLBase):
             for s in i.findall("script")
         ]
 
+    @_cache_property
+    def installer_script(self):
+        return self._get_attr_bool("installer-script", default=True)
+
+    @_cache_property
+    def arch(self):
+        return self._root.attrib["arch"]
+
 
 class Tree(_XMLBase):
     @_cache_property
@@ -270,11 +292,8 @@ class Tree(_XMLBase):
         return self._get_text("url")
 
     @_cache_property
-    def variant(self):
-        variant = self._root.find("variant")
-        if variant is not None:
-            return variant.attrib["id"]
-        return None
+    def variants(self):
+        return [v.attrib["id"] for v in self._root.findall("variant")]
 
     @_cache_property
     def treeinfo(self):
@@ -290,6 +309,10 @@ class Tree(_XMLBase):
     @_cache_property
     def initrd(self):
         return self._get_text("initrd")
+
+    @_cache_property
+    def arch(self):
+        return self._root.attrib["arch"]
 
 
 class Treeinfo(_XMLBase):
@@ -331,6 +354,24 @@ class ISO(_XMLBase):
     def volumesize(self):
         return self._get_int("volume-size", default=0)
 
+    @_cache_property
+    def l10n_languages(self):
+        return [L10nLanguage(t) for t in self._root.findall("l10n-language")]
+
+
+class L10nLanguage(_XMLBase):
+    @_cache_property
+    def value(self):
+        return self._root.text
+
+    @_cache_property
+    def regex(self):
+        return self._get_attr_bool("regex", default=False)
+
+    @_cache_property
+    def l10n_language_map(self):
+        return self._root.attrib.get("l10n-language-map", None)
+
 
 class Device(_XMLBase):
     def __init__(self, path):
@@ -353,12 +394,26 @@ class Datamap(_XMLBase):
         root = ET.parse(self.path.open("r")).getroot().find("datamap")
         super().__init__(root)
 
+    @_cache_property
+    def _mapping(self):
+        return dict(self.mapping_list)
+
     def __repr__(self):
         return "<%s path=%s>" % (self.__class__.__name__, self.path)
 
     @_cache_property
     def internal_id(self):
         return self._root.get("id")
+
+    @_cache_property
+    def mapping_list(self):
+        return [
+            (entry.attrib["inval"], entry.attrib["outval"])
+            for entry in self._root.findall("entry")
+        ]
+
+    def __getitem__(self, key):
+        return self._mapping[key]
 
 
 class InstallScript(_XMLBase):
@@ -373,6 +428,40 @@ class InstallScript(_XMLBase):
     @_cache_property
     def internal_id(self):
         return self._root.get("id")
+
+    @_cache_property
+    def injection_methods(self):
+        return [t.text for t in self._root.findall("injection-method")]
+
+    @_cache_property
+    def params(self):
+        configlist = self._root.find("config")
+        if configlist is None:
+            return []
+        return [InstallScriptConfigParam(t) for t in configlist.findall("param")]
+
+    @_cache_property
+    def template(self):
+        template = self._root.find("template")[0]
+        return ET.XML(ET.tostring(template))
+
+    @_cache_property
+    def expected_filename(self):
+        return self._get_text("expected-filename")
+
+
+class InstallScriptConfigParam(_XMLBase):
+    @_cache_property
+    def name(self):
+        return self._root.attrib["name"]
+
+    @_cache_property
+    def policy(self):
+        return self._root.attrib["policy"]
+
+    @_cache_property
+    def value_map(self):
+        return self._root.attrib.get("value-map", None)
 
 
 class Platform(_XMLBase):

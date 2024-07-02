@@ -15,6 +15,7 @@ function install_buildenv() {
         gettext \
         git \
         glib2-devel \
+        glibc-devel \
         glibc-langpack-en \
         json-glib-devel \
         libarchive-devel \
@@ -24,6 +25,7 @@ function install_buildenv() {
         make \
         meson \
         ninja-build \
+        perl-podlators \
         pkgconfig \
         python3 \
         python3-lxml \
@@ -31,6 +33,7 @@ function install_buildenv() {
         python3-requests \
         rpm-build \
         xz
+    rm -f /usr/lib*/python3*/EXTERNALLY-MANAGED
     rpm -qa | sort > /packages.txt
     mkdir -p /usr/libexec/ccache-wrappers
     ln -s /usr/bin/ccache /usr/libexec/ccache-wrappers/cc

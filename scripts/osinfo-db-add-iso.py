@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
 import argparse
-import distutils.spawn
 import os
+import shutil
 import sys
 import tempfile
 import time
+from pathlib import Path
 
 
 topdir = os.path.realpath(os.path.join(os.path.dirname(__file__), ".."))
@@ -54,7 +55,7 @@ def _main():
     options = _parse_args()
 
     iso = os.path.realpath(os.path.abspath(options.iso))
-    isoinfobin = distutils.spawn.find_executable("isoinfo")
+    isoinfobin = shutil.which("isoinfo")
     if not os.path.exists(iso):
         fail("iso does not exist: %s" % iso)
     if not isoinfobin:
@@ -79,8 +80,8 @@ def _main():
 
     # parse isoinfo
     # output an example media block
-    isodata = tests.isodata.get_isodatamedia(tmp.name)
-    print("XML to add to %s :" % osxml.filename[len(topdir) + 1 :] + ".in")
+    isodata = tests.isodata.get_isodatamedia(Path(tmp.name))
+    print("XML to add to %s :" % (str(osxml.path)[len(topdir) + 1 :] + ".in"))
     print()
     print('    <media arch="%s">' % options.arch)
     print("      <url>XXX</url>")

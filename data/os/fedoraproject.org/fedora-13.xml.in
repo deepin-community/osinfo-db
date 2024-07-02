@@ -17,7 +17,7 @@
 
     <!-- DVD -->
     <media arch="i686">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-DVD.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-DVD.iso</url>
       <iso>
         <volume-id>Fedora 13 i386 DVD</volume-id>
         <system-id>LINUX</system-id>
@@ -29,7 +29,7 @@
 
     <!-- Disk 1 -->
     <media arch="i686">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc1.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc1.iso</url>
       <iso>
         <volume-id>Fedora 13 i386 Disc 1</volume-id>
         <system-id>LINUX</system-id>
@@ -41,55 +41,47 @@
 
     <!-- Disk 2 -->
     <media arch="i686">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc2.iso</url>
       <iso>
         <volume-id>Fedora 13 i386 Disc 2</volume-id>
         <system-id>LINUX</system-id>
         <volume-size>724484096</volume-size>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
     </media>
 
     <!-- Disk 3 -->
     <media arch="i686">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc3.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc3.iso</url>
       <iso>
         <volume-id>Fedora 13 i386 Disc 3</volume-id>
         <system-id>LINUX</system-id>
         <volume-size>722425856</volume-size>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
     </media>
 
     <!-- Disk 4 -->
     <media arch="i686">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc4.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc4.iso</url>
       <iso>
         <volume-id>Fedora 13 i386 Disc 4</volume-id>
         <system-id>LINUX</system-id>
         <volume-size>718925824</volume-size>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
     </media>
 
     <!-- Disk 5 -->
     <media arch="i686">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc5.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/iso/Fedora-13-i386-disc5.iso</url>
       <iso>
         <volume-id>Fedora 13 i386 Disc 5</volume-id>
         <system-id>LINUX</system-id>
         <volume-size>386164736</volume-size>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
     </media>
 
     <!-- DVD -->
     <media arch="x86_64">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-DVD.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-DVD.iso</url>
       <iso>
         <volume-id>Fedora 13 x86_64 DVD</volume-id>
         <system-id>LINUX</system-id>
@@ -101,7 +93,7 @@
 
     <!-- Disk 1 -->
     <media arch="x86_64">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc1.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc1.iso</url>
       <iso>
         <volume-id>Fedora 13 x86_64 Disc 1</volume-id>
         <system-id>LINUX</system-id>
@@ -113,55 +105,47 @@
 
     <!-- Disk 2 -->
     <media arch="x86_64">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc2.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc2.iso</url>
       <iso>
         <volume-id>Fedora 13 x86_64 Disc 2</volume-id>
         <system-id>LINUX</system-id>
         <volume-size>728606720</volume-size>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
     </media>
 
     <!-- Disk 3 -->
     <media arch="x86_64">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc3.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc3.iso</url>
       <iso>
         <volume-id>Fedora 13 x86_64 Disc 3</volume-id>
         <system-id>LINUX</system-id>
         <volume-size>726992896</volume-size>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
     </media>
 
     <!-- Disk 4 -->
     <media arch="x86_64">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc4.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc4.iso</url>
       <iso>
         <volume-id>Fedora 13 x86_64 Disc 4</volume-id>
         <system-id>LINUX</system-id>
         <volume-size>723963904</volume-size>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
     </media>
 
     <!-- Disk 5 -->
     <media arch="x86_64">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc5.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/iso/Fedora-13-x86_64-disc5.iso</url>
       <iso>
         <volume-id>Fedora 13 x86_64 Disc 5</volume-id>
         <system-id>LINUX</system-id>
         <volume-size>723660800</volume-size>
       </iso>
-      <kernel>isolinux/vmlinuz</kernel>
-      <initrd>isolinux/initrd.img</initrd>
     </media>
 
     <!-- GNOME -->
     <media arch="i686" live="true">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Live/i686/Fedora-13-i686-Live.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Live/i686/Fedora-13-i686-Live.iso</url>
       <iso>
         <volume-id>Fedora-13-i686-Live</volume-id>
         <system-id>LINUX</system-id>
@@ -173,7 +157,7 @@
 
     <!-- KDE-->
     <media arch="i686" live="true">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Live/i686/Fedora-13-i686-Live-KDE.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Live/i686/Fedora-13-i686-Live-KDE.iso</url>
       <iso>
         <volume-id>Fedora-13-i686-Live-KDE</volume-id>
         <system-id>LINUX</system-id>
@@ -185,7 +169,7 @@
 
     <!-- GNOME -->
     <media arch="x86_64" live="true">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Live/x86_64/Fedora-13-x86_64-Live.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Live/x86_64/Fedora-13-x86_64-Live.iso</url>
       <iso>
         <volume-id>Fedora-13-x86_64-Live</volume-id>
         <system-id>LINUX</system-id>
@@ -197,7 +181,7 @@
 
     <!-- KDE-->
     <media arch="x86_64" live="true">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Live/x86_64/Fedora-13-x86_64-Live-KDE.iso</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Live/x86_64/Fedora-13-x86_64-Live-KDE.iso</url>
       <iso>
         <volume-id>Fedora-13-x86_64-Live-KDE</volume-id>
         <system-id>LINUX</system-id>
@@ -208,7 +192,7 @@
     </media>
 
     <tree arch="i686">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/os/</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/i386/os/</url>
       <treeinfo>
         <family>Fedora</family>
         <version>13</version>
@@ -216,7 +200,7 @@
       </treeinfo>
     </tree>
     <tree arch="x86_64">
-      <url>http://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/os/</url>
+      <url>https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/13/Fedora/x86_64/os/</url>
       <treeinfo>
         <family>Fedora</family>
         <version>13</version>

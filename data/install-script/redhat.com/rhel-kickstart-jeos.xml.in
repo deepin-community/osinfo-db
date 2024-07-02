@@ -32,7 +32,7 @@
               <xsl:value-of select="config/hostname"/>
             </xsl:when>
             <xsl:otherwise>
-              <xsl:text>locahost</xsl:text>
+              <xsl:text>localhost</xsl:text>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:template>
@@ -160,6 +160,13 @@
               <xsl:text>/BaseOS/</xsl:text>
               <xsl:call-template name="arch"/>
               <xsl:text>/os/</xsl:text>
+            </xsl:when>
+            <xsl:when test="os/distro = 'eurolinux'">
+              <xsl:text>https://fbi.cdn.euro-linux.com/dist/eurolinux/server/</xsl:text>
+              <xsl:call-template name="version"/>
+              <xsl:text>/</xsl:text>
+              <xsl:call-template name="arch"/>
+              <xsl:text>/BaseOS/os/</xsl:text>
             </xsl:when>
             <xsl:when test="os/distro = 'rocky'">
               <xsl:text>https://download.rockylinux.org/pub/rocky/</xsl:text>

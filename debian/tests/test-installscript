@@ -2,7 +2,7 @@
 
 set -e
 
-for r in $(seq 6 11) testing; do
+for r in $(seq 6 12) testing; do
     DEB="debian${r}"
     osinfo-install-script "${DEB}"
     if [ -f preseed.cfg ]; then

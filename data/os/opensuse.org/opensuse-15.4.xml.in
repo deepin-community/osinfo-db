@@ -50,8 +50,8 @@
         <system-id>LINUX</system-id>
         <publisher-id>SUSE LINUX GmbH</publisher-id>
       </iso>
-      <kernel>boot/aarch64/loader/linux</kernel>
-      <initrd>boot/aarch64/loader/initrd</initrd>
+      <kernel>boot/aarch64/linux</kernel>
+      <initrd>boot/aarch64/initrd</initrd>
     </media>
 
     <!-- Network -->
@@ -63,8 +63,8 @@
         <system-id>LINUX</system-id>
         <publisher-id>SUSE LINUX GmbH</publisher-id>
       </iso>
-      <kernel>boot/aarch64/loader/linux</kernel>
-      <initrd>boot/aarch64/loader/initrd</initrd>
+      <kernel>boot/aarch64/linux</kernel>
+      <initrd>boot/aarch64/initrd</initrd>
     </media>
 
     <!-- DVD -->
@@ -75,8 +75,8 @@
         <system-id>LINUX</system-id>
         <publisher-id>SUSE LINUX GmbH</publisher-id>
       </iso>
-      <kernel>boot/ppc64le/loader/linux</kernel>
-      <initrd>boot/ppc64le/loader/initrd</initrd>
+      <kernel>boot/ppc64le/linux</kernel>
+      <initrd>boot/ppc64le/initrd</initrd>
     </media>
 
     <!-- Network -->
@@ -88,8 +88,8 @@
         <system-id>LINUX</system-id>
         <publisher-id>SUSE LINUX GmbH</publisher-id>
       </iso>
-      <kernel>boot/ppc64le/loader/linux</kernel>
-      <initrd>boot/ppc64le/loader/initrd</initrd>
+      <kernel>boot/ppc64le/linux</kernel>
+      <initrd>boot/ppc64le/initrd</initrd>
     </media>
 
     <!-- DVD -->
@@ -100,8 +100,8 @@
         <system-id>LINUX</system-id>
         <publisher-id>SUSE LINUX GmbH</publisher-id>
       </iso>
-      <kernel>boot/s390x/loader/linux</kernel>
-      <initrd>boot/s390x/loader/initrd</initrd>
+      <kernel>boot/s390x/linux</kernel>
+      <initrd>boot/s390x/initrd</initrd>
     </media>
 
     <!-- Network -->
@@ -113,8 +113,8 @@
         <system-id>LINUX</system-id>
         <publisher-id>SUSE LINUX GmbH</publisher-id>
       </iso>
-      <kernel>boot/s390x/loader/linux</kernel>
-      <initrd>boot/s390x/loader/initrd</initrd>
+      <kernel>boot/s390x/linux</kernel>
+      <initrd>boot/s390x/initrd</initrd>
     </media>
 
     <!-- Live GNOME -->
@@ -204,6 +204,14 @@
       <kernel>boot/aarch64/loader/linux</kernel>
       <initrd>boot/aarch64/loader/initrd</initrd>
     </media>
+
+    <image arch="aarch64" format="qcow2" cloud-init="true">
+      <url>https://download.opensuse.org/repositories/Cloud:/Images:/Leap_15.4/images/openSUSE-Leap-15.4.aarch64-NoCloud.qcow2</url>
+    </image>
+
+    <image arch="x86_64" format="qcow2" cloud-init="true">
+      <url>https://download.opensuse.org/repositories/Cloud:/Images:/Leap_15.4/images/openSUSE-Leap-15.4.x86_64-NoCloud.qcow2</url>
+    </image>
 
     <tree arch="x86_64">
       <url>https://download.opensuse.org/pub/opensuse/distribution/leap/15.4/repo/oss/</url>
